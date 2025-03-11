@@ -11,16 +11,18 @@ class QuizApp:
         self.root.title("Quiz - Koło Fortuny")
         self.root.geometry("700x600")
 
+        # Wczytaj pytania z pliku CSV
         self.pytania = self.wczytaj_pytania('pytania.csv')
-        self.kategorie = list(set(p['Category'] for p in self.pytania))
+        self.kategorie = list(set(p['Category'] for p in self.pytania if p['Category']))
 
+        # Widgety GUI
         self.canvas = tk.Canvas(root, width=400, height=400, bg="white")
         self.canvas.pack(pady=20)
 
         self.spin_btn = tk.Button(root, text="Zakręć kołem!", command=self.spin_wheel)
         self.spin_btn.pack()
 
-        self.label_pytanie = tk.Label(root, text="", font=("Arial", 14))
+        self.label_pytanie = tk.Label(root, text="", font=("Arial", 14), wraplength=600)
         self.label_pytanie.pack(pady=10)
 
         self.odp_var = tk.StringVar()
@@ -34,14 +36,21 @@ class QuizApp:
         self.check_btn.pack(pady=10)
 
         self.aktualne_pytanie = None
+        self.wybrana_kategoria = None
         self.rysuj_kolo()
 
     def wczytaj_pytania(self, filename):
         pytania = []
-        with open(filename, newline='', encoding='utf-8') as csvfile:
-            reader = csv.DictReader(csvfile, delimiter=';')
-            for row in reader:
-                pytania.append(row)
+        try:
+            with open(filename, newline='', encoding='utf-8') as csvfile:
+                reader = csv.DictReader(csvfile, delimiter=',')
+                for row in reader:
+                    # Obsługa brakujących danych i konwersja odpowiedzi
+                    if row['Question Text'] and row['Category']:
+                        row['Correct Answer'] = row['Correct Answer'].split(',')  # Lista poprawnych odpowiedzi
+                        pytania.append(row)
+        except FileNotFoundError:
+            messagebox.showerror("Błąd", f"Nie znaleziono pliku {filename}.")
         return pytania
 
     def rysuj_kolo(self, highlight_idx=None):
@@ -58,7 +67,7 @@ class QuizApp:
                                    center[0]+radius, center[1]+radius,
                                    start=start_angle, extent=kat_angle,
                                    fill=color, outline="black")
-            angle_rad = math.radians(start_angle + kat_angle/2)
+            angle_rad = math.radians(start_angle + kat_angle / 2)
             x = center[0] + (radius - 60) * math.cos(angle_rad)
             y = center[1] + (radius - 60) * math.sin(angle_rad)
             self.canvas.create_text(x, y, text=kat, font=("Arial", 10, "bold"))
@@ -69,21 +78,26 @@ class QuizApp:
         for i in range(los):
             self.rysuj_kolo(highlight_idx=i % len(self.kategorie))
             self.canvas.update()
-            time.sleep(0.05 + i*0.01)
-        self.wybrana_kategoria = self.kategorie[(los-1) % len(self.kategorie)]
+            time.sleep(0.05 + i * 0.01)
+        self.wybrana_kategoria = self.kategorie[(los - 1) % len(self.kategorie)]
         self.pokaz_pytanie()
 
     def pokaz_pytanie(self):
         pytania_kat = [p for p in self.pytania if p['Category'] == self.wybrana_kategoria]
+        if not pytania_kat:
+            messagebox.showwarning("Brak pytań", f"Brak pytań dla kategorii: {self.wybrana_kategoria}")
+            self.reset_quiz()
+            return
+
         self.aktualne_pytanie = random.choice(pytania_kat)
         self.label_pytanie.config(text=self.aktualne_pytanie['Question Text'])
 
-        for idx in range(5):
-            opcja = self.aktualne_pytanie.get(f'Option {idx+1}', '')
-            if opcja.strip():
-                self.odp_radio[idx].config(text=opcja, state='normal')
+        for idx, rb in enumerate(self.odp_radio):
+            opcja = self.aktualne_pytanie.get(f'Option {idx+1}', '').strip()
+            if opcja:
+                rb.config(text=opcja, state='normal')
             else:
-                self.odp_radio[idx].config(text="", state='disabled')
+                rb.config(text="", state='disabled')
 
         self.odp_var.set(None)
         self.check_btn.config(state='normal')
@@ -94,7 +108,7 @@ class QuizApp:
             messagebox.showwarning("Brak odpowiedzi", "Proszę zaznaczyć odpowiedź!")
             return
 
-        poprawne_odp = self.aktualne_pytanie['Correct Answer'].split(',')
+        poprawne_odp = self.aktualne_pytanie['Correct Answer']
         if wybrana in poprawne_odp:
             messagebox.showinfo("Wynik", "Poprawna odpowiedź! ✔️")
             self.label_pytanie.config(bg='lightgreen')

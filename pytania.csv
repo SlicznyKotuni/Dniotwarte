@@ -1,65 +1,65 @@
 Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Option 5,Correct Answer,Time in seconds,Image Link,Category
-Ile procesor CPU ma poziomów pamięci cache?,Multiple Choice,1,2,3,4,,3,20,,lsk
-Windows Defender,Multiple Choice,Security center,World trade center,,,,1,20,,lsk
-Jakie są architektury procesorów?,Multiple Choice,ARM,x86,BRM,AMD,,1.2,20,,lsk
-Rozwiń skrót DNS,Multiple Choice,Digital Network Service,Data Navigation System,Dynamic Node Structure,Domain Name System,,4,20,,lsk
-Jakie są rodzaje kart NVIDIA,Multiple Choice,RTX,GTX,RX,RXT,GT,"1,2,5",120,,lsk
-Co oznacz symbol F przy nazwie procesora Intel Core?,Multiple Choice,Możliwość podkręcania (overclocking),Brak wbudowanego układu graficznego,Lepsza wydajność,Wbudowany układ graficzny,,2,20,,lsk
-jaka jest najlepsza przeglądarka ,,krawędź,Google chroma,ognisty lis,odważny,,3,,,lsk
-Czym jest kabel RJ45,Multiple Choice,Kabel Ethernet,Kabel zasilania,to nie kabel,8P8C,,3,20,,lsk
-do czego służy kabel 8P8C,Checkbox,to nie kabel,takie cos nie istnieje,Ethernet,zamiennik USB 3.0,,3,20,,lsk
-Co mowi informatyk jak dostanie prezent?,Multiple Choice,110101010101010010101,"if a=""prezent"": print(""Dziękuję bardzo"") else: print(""😭"")",Dziękuję za pamięć,Falgmxłg ac stgagów <3 (klucz 3),,"2,3,4",20,,lsk
-Ile kosztuje winrar?,Multiple Choice,tak,nie,on kosztuje???!?!?!,,,"2,3",20,,lsk
-"Twój kolega wyciąga niebezpiecznie pendrive, co robisz?",Multiple Choice,dzwonie na 112,"pisze SMS o treści ""POMOC"" na numer 1919","tłumaczę człowiekowi, ze mógł uszkodzić pendrive","Rekreacja Mk 15, 6-15",,3,20,,lsk
-Czy rok 2025 to rok linuxa?,Multiple Choice,tak,odpowiedź A,odpowiedź B,linux krulem,KOCHAM WINDWOS 11,"1,2,3,4",20,,lsk
-Czy ptoszek jest strona do pobrania zdjęć ptaków ,Multiple Choice,Tak,Ma dużą różnorodność zdjęć smakowitych ptaków ,Jest bezpieczna strona o ptakach,To wirus,,"1,2,3",20,,lsk
-Czym jest terminal?,Multiple Choice,konsolą,księgą rodzaju,"to sandbox MMO RPG, w którym to ty piszesz własną historię, zamiast podążać wytyczoną ścieżką",rm -rf /*,enchanting table,1,20,,lsk
-Które z tych programów to VPNy,Multiple Choice,Mullvad,Windscribe,Wireshark,,,1,20,,lsk
-Ile kabli jest w środku kabla ethernet?,Multiple Choice,9,8,12,4,dużo ,2,20,,lsk
-Ile portów USB ma płyta główna?,Multiple Choice,4,2,6,Nie ma,,1,20,,lsk
-Jaka jest pierwsza rzecz którą robisz w programie Minecrosift Edge?,Multiple Choice,Zamykam 1000 tabów z reklamami i personalizacją,Płaczę,Instaluję Google chrome,morduje billa gatesa,Wszystkie powyżej,5,20,,lsk
-Jaka artyleria przeciwlotnicza jest nailepsza,Multiple Choice,,,,,,3,20,,aso
-Czy głowica nuklearna to głowica hydro wodorowa ,Multiple Choice,tak,nie,idealna na ukraine,stary co ty kurwa piszesz,,3,20,,aso
-Kto jest założycielem apple,Multiple Choice,Norbert Sobczak,Bill Gates,Elon Musk,twój tata,Ja,2,20,,aso
-Uniwersytet ekonomiczny jest głowica nuklearna?,Multiple Choice,tak,,,,,2,20,,aso
-Kto stworzył linux?,Multiple Choice,Tadeusz Mazowiecki,Sławomir Mentzen,Donald Trump,Linus Torvalds,Robert Lewandowski,4,20,,aso
-Co robi programista kiedy nie może zasnąć?,Multiple Choice,Liczy owce,Liczy w systemie binarnym,Debuguje swoje sny,Czyta dokumentację PHP,Wszystkie powyższe,5,20,,Oprogramowanie
-Jak brzmi ulubiony żart routera?,Multiple Choice,Pakiet walks into a bar...,404 - żart not found,Ping... Pong!,Error establishing connection to punchline,,3,20,,Sieci komputerowe
+Ile procesor CPU ma poziomów pamięci cache?,Multiple Choice,1,2,3,4,,3,20,,Sieci_komputerowe
+Windows Defender,Multiple Choice,Security center,World trade center,,,,1,20,,Sieci_komputerowe
+Jakie są architektury procesorów?,Multiple Choice,ARM,x86,BRM,AMD,,1.2,20,,Sieci_komputerowe
+Rozwiń skrót DNS,Multiple Choice,Digital Network Service,Data Navigation System,Dynamic Node Structure,Domain Name System,,4,20,,Sieci_komputerowe
+Jakie są rodzaje kart NVIDIA,Multiple Choice,RTX,GTX,RX,RXT,GT,"1,2,5",120,,Sieci_komputerowe
+Co oznacz symbol F przy nazwie procesora Intel Core?,Multiple Choice,Możliwość podkręcania (overclocking),Brak wbudowanego układu graficznego,Lepsza wydajność,Wbudowany układ graficzny,,2,20,,Sieci_komputerowe
+jaka jest najlepsza przeglądarka ,,krawędź,Google chroma,ognisty lis,odważny,,3,,,Sieci_komputerowe
+Czym jest kabel RJ45,Multiple Choice,Kabel Ethernet,Kabel zasilania,to nie kabel,8P8C,,3,20,,Sieci_komputerowe
+do czego służy kabel 8P8C,Checkbox,to nie kabel,takie cos nie istnieje,Ethernet,zamiennik USB 3.0,,3,20,,Sieci_komputerowe
+Co mowi informatyk jak dostanie prezent?,Multiple Choice,110101010101010010101,"if a=""prezent"": print(""Dziękuję bardzo"") else: print(""😭"")",Dziękuję za pamięć,Falgmxłg ac stgagów <3 (klucz 3),,"2,3,4",20,,Sieci_komputerowe
+Ile kosztuje winrar?,Multiple Choice,tak,nie,on kosztuje???!?!?!,,,"2,3",20,,Sieci_komputerowe
+"Twój kolega wyciąga niebezpiecznie pendrive, co robisz?",Multiple Choice,dzwonie na 112,"pisze SMS o treści ""POMOC"" na numer 1919","tłumaczę człowiekowi, ze mógł uszkodzić pendrive","Rekreacja Mk 15, 6-15",,3,20,,Sieci_komputerowe
+Czy rok 2025 to rok linuxa?,Multiple Choice,tak,odpowiedź A,odpowiedź B,linux krulem,KOCHAM WINDWOS 11,"1,2,3,4",20,,Sieci_komputerowe
+Czy ptoszek jest strona do pobrania zdjęć ptaków ,Multiple Choice,Tak,Ma dużą różnorodność zdjęć smakowitych ptaków ,Jest bezpieczna strona o ptakach,To wirus,,"1,2,3",20,,Sieci_komputerowe
+Czym jest terminal?,Multiple Choice,konsolą,księgą rodzaju,"to sandbox MMO RPG, w którym to ty piszesz własną historię, zamiast podążać wytyczoną ścieżką",rm -rf /*,enchanting table,1,20,,Sieci_komputerowe
+Które z tych programów to VPNy,Multiple Choice,Mullvad,Windscribe,Wireshark,,,1,20,,Sieci_komputerowe
+Ile kabli jest w środku kabla ethernet?,Multiple Choice,9,8,12,4,dużo ,2,20,,Sieci_komputerowe
+Ile portów USB ma płyta główna?,Multiple Choice,4,2,6,Nie ma,,1,20,,Sieci_komputerowe
+Jaka jest pierwsza rzecz którą robisz w programie Minecrosift Edge?,Multiple Choice,Zamykam 1000 tabów z reklamami i personalizacją,Płaczę,Instaluję Google chrome,morduje billa gatesa,Wszystkie powyżej,5,20,,Sieci_komputerowe
+Jaka artyleria przeciwlotnicza jest nailepsza,Multiple Choice,,,,,,3,20,,Informatyka
+Czy głowica nuklearna to głowica hydro wodorowa ,Multiple Choice,tak,nie,idealna na ukraine,stary co ty kurwa piszesz,,3,20,,Informatyka
+Kto jest założycielem apple,Multiple Choice,Norbert Sobczak,Bill Gates,Elon Musk,twój tata,Ja,2,20,,Informatyka
+Uniwersytet ekonomiczny jest głowica nuklearna?,Multiple Choice,tak,,,,,2,20,,Informatyka
+Kto stworzył linux?,Multiple Choice,Tadeusz Mazowiecki,Sławomir Mentzen,Donald Trump,Linus Torvalds,Robert Lewandowski,4,20,,Informatyka
+Co robi programista kiedy nie może zasnąć?,Multiple Choice,Liczy owce,Liczy w systemie binarnym,Debuguje swoje sny,Czyta dokumentację PHP,Wszystkie powyższe,5,20,,Informatyka
+Jak brzmi ulubiony żart routera?,Multiple Choice,Pakiet walks into a bar...,404 - żart not found,Ping... Pong!,Error establishing connection to punchline,,3,20,,Sieci_komputerowe
 Co mówi Linux do Windowsa na placu zabaw?,Multiple Choice,Jestem open source-owy!,Nie bawię się z proprietary software,Twój Blue Screen jest słaby,Sudo make me a sandwich,,4,20,,Linux
 Dlaczego programiści nie lubią natury?,Multiple Choice,Słabe Wi-Fi w lesie,Za dużo bugów (owadów),Drzewa nie mają USB,Wszystkie odpowiedzi są poprawne,,4,20,,Informatyka
-Jaki jest ulubiony taniec webdevelopera?,Multiple Choice,CSS Dance,HTML Shuffle,JavaScript Jive,404 Dance Not Found,Bootstrap Boogie,"1,3,5",20,,Strony internetowe
+Jaki jest ulubiony taniec webdevelopera?,Multiple Choice,CSS Dance,HTML Shuffle,JavaScript Jive,404 Dance Not Found,Bootstrap Boogie,"1,3,5",20,,Informatyka
 Co robi informatyk na siłowni?,Multiple Choice,Podnosi serversy,Robi CTRL+Z po każdej serii,Debuguje swoją technikę,Formatuje wagę,Optymalizuje wydajność,"1,5",20,,Informatyka
 Jak programista naprawia klimatyzację?,Multiple Choice,Wyłącza i włącza,Aktualizuje sterowniki,Używa wentylacji zależności,Otwiera okno (Windows),,1,20,,Urządzenia techniki komputerowej
-Dlaczego baza danych poszła do lekarza?,Multiple Choice,Miała problemy z relacjami,Zgubiła połączenie,DROP TABLE zdrowie,Miała SQL injection,,1,20,,Oprogramowanie
-Co mówi PHP do JavaScript?,Multiple Choice,Echoluję cię,Jesteś taki klientowy,Nie działasz po mojej stronie,TypeError: undefined is not a function,,3,20,,Strony internetowe
+Dlaczego baza danych poszła do lekarza?,Multiple Choice,Miała problemy z relacjami,Zgubiła połączenie,DROP TABLE zdrowie,Miała SQL injection,,1,20,,Informatyka
+Co mówi PHP do JavaScript?,Multiple Choice,Echoluję cię,Jesteś taki klientowy,Nie działasz po mojej stronie,TypeError: undefined is not a function,,3,20,,Informatyka
 Ulubione danie administratora systemu?,Multiple Choice,Spam z filtrem,RAM-en,Cache-a z mlekiem,Wszystkie powyższe,,4,20,,Linux
-Jak haker nazywa swoją kawę?,Multiple Choice,Brute Force Espresso,DDoS (Double Shot),Root Access Roast,SQL Injection Dark Brew,Malware Macchiato,"1,3",20,,Sieci komputerowe
+Jak haker nazywa swoją kawę?,Multiple Choice,Brute Force Espresso,DDoS (Double Shot),Root Access Roast,SQL Injection Dark Brew,Malware Macchiato,"1,3",20,,Sieci_komputerowe
 Co robi procesor w wolnym czasie?,Multiple Choice,Przetwarza życiowe decyzje,Cache-uje wspomnienia,Wykonuje pętle nieskończonego odpoczynku,Liczy owce w wielowątkowości,,4,20,,Urządzenia techniki komputerowej
-Dlaczego HTML nie kłamie?,Multiple Choice,Bo jest znacznikowy,Jest zbyt przejrzysty,Zawsze się waliduje,Ma otwarte tagi,,1,20,,Strony internetowe
+Dlaczego HTML nie kłamie?,Multiple Choice,Bo jest znacznikowy,Jest zbyt przejrzysty,Zawsze się waliduje,Ma otwarte tagi,,1,20,,Informatyka
 Jak informatyk karmi kota?,Multiple Choice,sudo give food,apt-get install food,cat > food,chmod 777 food_bowl,,1,20,,Linux
 Ulubiona gra słowna programisty?,Multiple Choice,Recursion (see Recursion),Array's Kitchen,!false (it's funny because it's true),Wszystkie powyższe,,4,20,,Informatyka
-Co mówi router do drukarki?,Multiple Choice,Masz IP w porządku?,Jak tam twoje porty?,Dlaczego zawsze jesteś offline?,Nie jesteśmy w tej samej sieci,,3,20,,Sieci komputerowe
+Co mówi router do drukarki?,Multiple Choice,Masz IP w porządku?,Jak tam twoje porty?,Dlaczego zawsze jesteś offline?,Nie jesteśmy w tej samej sieci,,3,20,,Sieci_komputerowe
 Dlaczego komputer poszedł do lekarza?,Multiple Choice,Złapał wirusa,Miał problemy z pamięcią,Potrzebował update szczepionki,Wszystkie powyższe,,4,20,,Urządzenia techniki komputerowej
-Co programista robi w restauracji?,Multiple Choice,Szuka błędów w menu,Próbuje zoptymalizować zamówienie,Fork-uje cudze dania,Testuje wszystkie potrawy,,2,20,,Oprogramowanie
+Co programista robi w restauracji?,Multiple Choice,Szuka błędów w menu,Próbuje zoptymalizować zamówienie,Fork-uje cudze dania,Testuje wszystkie potrawy,,2,20,,Informatyka
 Jak informatyk spędza walentynki?,Multiple Choice,Kompiluje uczucia,Programuje randkę,Szuka drugiej połowy w binarce,Debuguje związek,,3,20,,Informatyka
-Co robi Linux w deszczowy dzień?,Multiple Choice,Uruchamia防雨伞.sh,Tworzy kopię zapasową chmur,sudo rm rain,Instaluje pakiet umbrella,,4,20,,Linux
-Co robi JavaScript w nocy?,Multiple Choice,Liczy asynchroniczne owce,Promise.sleep(),Czeka na callback ze snów,Wszystkie powyższe,,4,20,,Strony internetowe
-Jak brzmi hasło administratora do Wi-Fi?,Multiple Choice,admin123,password123,Poprawne hasło,hunter2,correcthorsebatterystaple,5,20,,Sieci komputerowe
-Co mówi jeden RAM do drugiego?,Multiple Choice,Masz wolną pamięć dziś wieczorem?,DDR-yginalny jesteś,Ale masz cache!,Nie jestem taki volatile,,1,20,,Urządzenia techniki komputerowe
+Co robi Linux w deszczowy dzień?,Multiple Choice,Uruchamia防雨伞.sh,Tworzy kopię zapInformatykawą chmur,sudo rm rain,Instaluje pakiet umbrella,,4,20,,Linux
+Co robi JavaScript w nocy?,Multiple Choice,Liczy asynchroniczne owce,Promise.sleep(),Czeka na callback ze snów,Wszystkie powyższe,,4,20,,Informatyka
+Jak brzmi hasło administratora do Wi-Fi?,Multiple Choice,admin123,password123,Poprawne hasło,hunter2,correcthorsebatterystaple,5,20,,Sieci_komputerowe
+Co mówi jeden RAM do drugiego?,Multiple Choice,Masz wolną pamięć dziś wieczorem?,DDR-yginalny jesteś,Ale masz cache!,Nie jestem taki volatile,,1,20,,Urządzenia techniki komputerowej
 Dlaczego programista nie może otworzyć słoika?,Multiple Choice,Brak uprawnień root,IOException: Lid too tight,Próbuje użyć npm install opener,Czeka na pull request,,1,20,,Linux
-Co robi Python w zoo?,Multiple Choice,Zjada inne języki,Indentuje wybiegi,Importuje nowe zwierzęta,Wszystkie powyższe,,2,20,,Oprogramowanie
+Co robi Python w zoo?,Multiple Choice,Zjada inne języki,Indentuje wybiegi,Importuje nowe zwierzęta,Wszystkie powyższe,,2,20,,Informatyka
 Ulubiony sport informatyka?,Multiple Choice,Surfowanie po sieci,Podnoszenie serwerów,Skoki przez wyjątki,Debug-ging,,3,20,,Informatyka
-Jak CSS spędza weekend?,Multiple Choice,Flexuje przed lustrem,Pozycjonuje się absolutnie,Marginalizuje problemy,Float-uje na basenie,,4,20,,Strony internetowe
-Co mówi procesor do wentylatora?,Multiple Choice,Jesteś cool,Kręcisz mnie,Przegrzewam się przy tobie,Fan Error 404,,1,20,,Urządzenia techniki komputerowe
+Jak CSS spędza weekend?,Multiple Choice,Flexuje przed lustrem,Pozycjonuje się absolutnie,Marginalizuje problemy,Float-uje na basenie,,4,20,,Informatyka
+Co mówi procesor do wentylatora?,Multiple Choice,Jesteś cool,Kręcisz mnie,Przegrzewam się przy tobie,Fan Error 404,,1,20,,Urządzenia techniki komputerowej
 Dlaczego Linux nie gra w gry?,Multiple Choice,Wine not?,Brak sterowników,Sudo apt-get install life,Za dużo zależności,,1,20,,Linux
-Co robi firewall na imprezie?,Multiple Choice,Blokuje niechciane porty,Filtruje podejrzane drinki,DROP TABLE party,Wszystkie powyższe,,4,20,,Sieci komputerowe
+Co robi firewall na imprezie?,Multiple Choice,Blokuje niechciane porty,Filtruje podejrzane drinki,DROP TABLE party,Wszystkie powyższe,,4,20,,Sieci_komputerowe
 Jak informatyk naprawia związek?,Multiple Choice,git reset --hard HEAD,ctrl+z,alt+f4,rm -rf problemy/,,1,20,,Informatyka
-Ulubiona przekąska programisty?,Multiple Choice,Chipsy cache,Ciastka cookies,Byte-sy,Wszystkie powyższe,,4,20,,Oprogramowanie
-Co robi HTML na siłowni?,Multiple Choice,Podnosi znaczniki,Wyciska div-y,Trenuje semantykę,Flex-uje,,4,20,,Strony internetowe
-Dlaczego serwer poszedł na terapię?,Multiple Choice,Miał problemy z połączeniem,Za dużo requestów,Syndrom wypalenia,Error 500: Internal Server Error,,3,20,,Sieci komputerowe
+Ulubiona przekąska programisty?,Multiple Choice,Chipsy cache,Ciastka cookies,Byte-sy,Wszystkie powyższe,,4,20,,Informatyka
+Co robi HTML na siłowni?,Multiple Choice,Podnosi znaczniki,Wyciska div-y,Trenuje semantykę,Flex-uje,,4,20,,Informatyka
+Dlaczego serwer poszedł na terapię?,Multiple Choice,Miał problemy z połączeniem,Za dużo requestów,Syndrom wypalenia,Error 500: Internal Server Error,,3,20,,Sieci_komputerowe
 Jak informatyk robi pranie?,Multiple Choice,Sortuje według kolorów,Używa algorytmu bubble sort,Debuguje plamy,chmod 777 pralka,,2,20,,Linux
-Co mówi programista do ekspresu do kawy?,Multiple Choice,brew install coffee,make coffee,sudo coffee please,npm install --save caffeine,,1,20,,Oprogramowanie
-Dlaczego monitor jest smutny?,Multiple Choice,Ma niską rozdzielczość,Nikt nie docenia jego input,Wyświetla blue screen,Brak sygnału z życia,,4,20,,Urządzenia techniki komputerowe
+Co mówi programista do ekspresu do kawy?,Multiple Choice,brew install coffee,make coffee,sudo coffee please,npm install --save caffeine,,1,20,,Informatyka
+Dlaczego monitor jest smutny?,Multiple Choice,Ma niską rozdzielczość,Nikt nie docenia jego input,Wyświetla blue screen,Brak sygnału z życia,,4,20,,Urządzenia techniki komputerowej
 Jak SQL spędza wakacje?,Multiple Choice,SELECT * FROM beach,JOIN innych turystów,GROUP BY zainteresowania,ORDER BY fun DESC,,4,20,,Informatyka
-Co robi DNS w restauracji?,Multiple Choice,Resolve-uje menu,Przekierowuje zamówienia,Cache-uje ulubione dania,Wszystkie powyższe,,4,20,,Sieci komputerowe
-Dlaczego programista nie może spać?,Multiple Choice,Debuguje sny,Nieskończona pętla bezsenności,Stack overflow łóżka,Zapomniał zamknąć IDE,,2,20,,Oprogramowanie
+Co robi DNS w restauracji?,Multiple Choice,Resolve-uje menu,Przekierowuje zamówienia,Cache-uje ulubione dania,Wszystkie powyższe,,4,20,,Sieci_komputerowe
+Dlaczego programista nie może spać?,Multiple Choice,Debuguje sny,Nieskończona pętla bezsenności,Stack overflow łóżka,Zapomniał zamknąć IDE,,2,20,,Informatyka

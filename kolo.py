@@ -27,6 +27,10 @@ class QuizApp:
         self.pytania = self.wczytaj_pytania('pytania.csv')
         self.kategorie = list(set(p['Category'] for p in self.pytania))
         
+        # Dodaj licznik odpowiedzi
+        self.correct_answers = 0
+        self.total_answers = 0
+        
         # Załaduj ikony dla kategorii
         self.ikony = self.zaladuj_ikony()
         
@@ -72,6 +76,17 @@ class QuizApp:
         self.canvas = tk.Canvas(self.wheel_frame, width=self.wheel_size, height=self.wheel_size, 
                                bg="#34495e", highlightthickness=2, highlightbackground="#f39c12")
         self.canvas.pack(pady=5)
+        
+        # Ramka na licznik odpowiedzi
+        self.counter_frame = tk.Frame(self.right_frame, bg="#2c3e50")
+        self.counter_frame.pack(fill="x", pady=5)
+        
+        # Etykieta licznika
+        self.counter_label = tk.Label(self.counter_frame, 
+                                    text="Poprawne odpowiedzi: 0/0 (0%)", 
+                                    font=("Arial", 14, "bold"),
+                                    bg="#2c3e50", fg="#ecf0f1")
+        self.counter_label.pack(pady=5)
         
         # Przycisk z efektem hover
         self.spin_btn = tk.Button(self.wheel_frame, text="Zakręć kołem!", command=self.spin_wheel, 
@@ -170,16 +185,18 @@ class QuizApp:
             print(f"Utworzono katalog {assets_dir}. Umieść w nim ikony dla kategorii.")
             return ikony
             
-        # Mapowanie kategorii na nazwy plików ikon
+        # Mapowanie kategorii na nazwy plików ikon - poprawione
         ikona_mapping = {
             "lsk": "computer.png",
             "aso": "security.png",
             "Oprogramowanie": "software.png",
-            "Sieci komputerowe": "network.png",
+            "Sieci_komputerowe": "network.png",
             "Linux": "linux.png",
             "Informatyka": "informatics.png",
             "Strony internetowe": "web.png",
-            "Urządzenia techniki komputerowe": "hardware.png"
+            "Urządzenia techniki komputerowe": "hardware.png",
+            "Sieci komputerowe": "network.png",
+            "Urządzenia techniki komputerowej": "hardware.png"
         }
         
         # Załaduj ikony dla każdej kategorii
@@ -224,7 +241,7 @@ class QuizApp:
                 icon_label.pack(side="left", padx=3)
             else:
                 # Kolorowy kwadrat jako zamiennik ikony
-                colors = ["#e74c3c", "#f39c12", "#f1c40f", "#27ae60", "#3498db", "#9b59b6"]
+                colors = ["#FF6B6B", "#4ECDC4", "#FFD166", "#06D6A0", "#118AB2", "#073B4C"]
                 color = colors[i % len(colors)]
                 icon_label = tk.Label(item_frame, bg=color, width=2, height=1)
                 icon_label.pack(side="left", padx=3, ipadx=icon_size//6, ipady=icon_size//6)
@@ -255,13 +272,17 @@ class QuizApp:
         center_y = self.wheel_size / 2
         radius = self.wheel_size * 0.4  # Promień koła
         
-       # Lepsze kolory dla koła
-        colors = ["#e74c3c", "#f39c12", "#f1c40f", "#27ae60", "#3498db", "#9b59b6"]
+        # Nowe, bardziej przyjazne kolory dla koła
+        colors = [
+            "#FF6B6B", "#4ECDC4", "#FFD166", "#06D6A0", 
+            "#118AB2", "#073B4C", "#F72585", "#7209B7", 
+            "#3A86FF", "#8338EC", "#FB5607", "#FFBE0B"
+        ]
         
-        # Rysowanie koła z gradientem
+        # Rysowanie koła
         for i, kat in enumerate(self.kategorie):
             start_angle = i * kat_angle
-            color = colors[i % len(colors)] if i != highlight_idx else "#e74c3c"
+            color = colors[i % len(colors)] if i != highlight_idx else "#E63946"
             self.canvas.create_arc(center_x - radius, center_y - radius,
                                   center_x + radius, center_y + radius,
                                   start=start_angle, extent=kat_angle,
@@ -309,7 +330,7 @@ class QuizApp:
             center_x + radius + arrow_size/3, center_y - arrow_size/2,
             center_x + radius + arrow_size/3, center_y + arrow_size/2,
             center_x + radius + arrow_size, center_y,
-            fill="#e74c3c", outline="white", width=2
+            fill="#FF1E56", outline="white", width=2
         )
 
     def spin_wheel(self):
@@ -347,71 +368,53 @@ class QuizApp:
         # Sprawdzenie czy pytanie ma wiele odpowiedzi
         ma_wiele_odp = "," in self.aktualne_pytanie.get('Correct Answer', '')
         
-        # Umożliwienie wyboru wielu odpowiedzi
-        self.odp_vars = []
-        self.odp_checks = []
-
-        
-        # Umożliwienie wyboru wielu odpowiedzi
-        self.odp_vars = []
-        self.odp_checks = []
-
-        
-        # Umożliwienie wyboru wielu odpowiedzi
-        self.odp_vars = []
-        self.odp_checks = []
-
-        
         # Tworzenie nowych widgetów odpowiedzi
         for idx in range(5):
             opcja = self.aktualne_pytanie.get(f'Option {idx+1}', '')
             if opcja.strip():
+                # Kontener dla checkboxa/radiobutton i etykiety
+                option_frame = tk.Frame(self.odp_frame, bg="#34495e")
+                option_frame.pack(fill="x", pady=2)
+                
                 if ma_wiele_odp:
                     # Checkbox dla wielu odpowiedzi
                     var = IntVar()
                     self.odp_vars.append(var)
                     
-                    # Kontener dla checkboxa i etykiety
-                    self.odp_vars.append(var)  # Dodaj zmienną do listy
-
-                    self.odp_vars.append(var)  # Dodaj zmienną do listy
-
-                    self.odp_vars.append(var)  # Dodaj zmienną do listy
-
-                    option_frame = tk.Frame(self.odp_frame, bg="#34495e")
-                    option_frame.pack(fill="x", pady=2)
-                    
+                    # Poprawiony checkbox z możliwością odznaczania
                     cb = Checkbutton(option_frame, variable=var, bg="#34495e", 
-                                    activebackground="#2980b9", selectcolor="#2980b9")
+                                    activebackground="#2980b9", selectcolor="#2980b9",
+                                    onvalue=1, offvalue=0)
                     cb.pack(side="left", padx=5)
                     
+                    # Dodaj etykietę, która po kliknięciu przełącza checkbox
                     label = tk.Label(option_frame, text=opcja, font=("Arial", 12),
                                     bg="#34495e", fg="#ecf0f1", anchor="w")
                     label.pack(side="left", fill="x", expand=True, padx=5)
+                    
+                    # Obsługa kliknięcia na etykietę
+                    label.bind("<Button-1>", lambda event, v=var: v.set(1 if v.get() == 0 else 0))
                     
                     self.odp_checks.append(cb)
                 else:
                     # Radiobutton dla pojedynczej odpowiedzi
-                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
-
-                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
-
-                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
-
                     if idx == 0:
                         self.odp_var = tk.StringVar()
                     
-                    # Kontener dla radiobutton i etykiety
-                    option_frame = tk.Frame(self.odp_frame, bg="#34495e")
-                    option_frame.pack(fill="x", pady=2)
-                    
+                    # Poprawiony radiobutton z możliwością odznaczania
                     rb = tk.Radiobutton(option_frame, variable=self.odp_var, value=str(idx+1), 
-                                      bg="#34495e", activebackground="#2980b9", selectcolor="#2980b9")
+                                      bg="#34495e", activebackground="#2980b9", selectcolor="#2980b9",
+                                      indicatoron=1)  # Pokazuj wskaźnik (kółko)
                     rb.pack(side="left", padx=5)
                     
+                    # Dodaj etykietę, która po kliknięciu przełącza radiobutton
                     label = tk.Label(option_frame, text=opcja, font=("Arial", 12),
                                     bg="#34495e", fg="#ecf0f1", anchor="w")
                     label.pack(side="left", fill="x", expand=True, padx=5)
+                    
+                    # Obsługa kliknięcia na etykietę
+                    label.bind("<Button-1>", lambda event, val=str(idx+1), v=self.odp_var: 
+                              v.set("" if v.get() == val else val))
 
         self.check_btn.config(state='normal')
         
@@ -424,6 +427,7 @@ class QuizApp:
 
     def check_answer(self):
         ma_wiele_odp = "," in self.aktualne_pytanie.get('Correct Answer', '')
+        odpowiedz_poprawna = False
         
         if ma_wiele_odp:
             # Sprawdzenie wielu odpowiedzi
@@ -439,6 +443,7 @@ class QuizApp:
             zadna_niepoprawna = all(odp in poprawne_odp for odp in wybrane)
             
             if wszystkie_poprawne and zadna_niepoprawna:
+                odpowiedz_poprawna = True
                 messagebox.showinfo("Wynik", "Poprawna odpowiedź! ✔️")
                 self.label_pytanie.config(bg='lightgreen')
                 try:
@@ -470,6 +475,7 @@ class QuizApp:
                     
                 poprawne_odp = self.aktualne_pytanie['Correct Answer'].split(',')
                 if wybrana in poprawne_odp:
+                    odpowiedz_poprawna = True
                     messagebox.showinfo("Wynik", "Poprawna odpowiedź! ✔️")
                     self.label_pytanie.config(bg='lightgreen')
                     try:
@@ -493,7 +499,19 @@ class QuizApp:
                         pass
             except:
                 messagebox.showwarning("Błąd", "Wystąpił problem przy sprawdzaniu odpowiedzi!")
+                return
 
+        # Aktualizuj licznik odpowiedzi
+        self.total_answers += 1
+        if odpowiedz_poprawna:
+            self.correct_answers += 1
+        
+        # Oblicz procent poprawnych odpowiedzi
+        procent = 0 if self.total_answers == 0 else int((self.correct_answers / self.total_answers) * 100)
+        
+        # Aktualizuj etykietę licznika
+        self.counter_label.config(text=f"Poprawne odpowiedzi: {self.correct_answers}/{self.total_answers} ({procent}%)")
+        
         self.root.after(2000, self.reset_quiz)
 
     def reset_quiz(self):

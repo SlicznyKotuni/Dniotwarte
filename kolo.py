@@ -347,6 +347,21 @@ class QuizApp:
         # Sprawdzenie czy pytanie ma wiele odpowiedzi
         ma_wiele_odp = "," in self.aktualne_pytanie.get('Correct Answer', '')
         
+        # Umożliwienie wyboru wielu odpowiedzi
+        self.odp_vars = []
+        self.odp_checks = []
+
+        
+        # Umożliwienie wyboru wielu odpowiedzi
+        self.odp_vars = []
+        self.odp_checks = []
+
+        
+        # Umożliwienie wyboru wielu odpowiedzi
+        self.odp_vars = []
+        self.odp_checks = []
+
+        
         # Tworzenie nowych widgetów odpowiedzi
         for idx in range(5):
             opcja = self.aktualne_pytanie.get(f'Option {idx+1}', '')
@@ -357,6 +372,12 @@ class QuizApp:
                     self.odp_vars.append(var)
                     
                     # Kontener dla checkboxa i etykiety
+                    self.odp_vars.append(var)  # Dodaj zmienną do listy
+
+                    self.odp_vars.append(var)  # Dodaj zmienną do listy
+
+                    self.odp_vars.append(var)  # Dodaj zmienną do listy
+
                     option_frame = tk.Frame(self.odp_frame, bg="#34495e")
                     option_frame.pack(fill="x", pady=2)
                     
@@ -371,6 +392,12 @@ class QuizApp:
                     self.odp_checks.append(cb)
                 else:
                     # Radiobutton dla pojedynczej odpowiedzi
+                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
+
+                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
+
+                    self.odp_var = tk.StringVar()  # Upewnij się, że zmienna jest zainicjowana
+
                     if idx == 0:
                         self.odp_var = tk.StringVar()
                     

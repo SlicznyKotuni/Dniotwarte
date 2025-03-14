@@ -13,12 +13,13 @@ class QuizApp:
         self.root.title("Quiz z Losowaniem Kategorii")
         self.root.geometry("1200x800")
         self.root.configure(bg="#2E2E2E")  # Ciepły grafitowy
+        self.root.minsize(800, 600)  # Minimalna wielkość okna
         
         # Konfiguracja stylu
         self.style = ttk.Style()
         self.style.theme_use("clam")
         self.style.configure("TFrame", background="#2E2E2E")
-        self.style.configure("TButton", background="#2E2E2E", foreground="#FF3333")  # Neonowa czerwień
+        self.style.configure("TButton", background="#2E2E2E", foreground="#FF3333", font=("Arial", 12, "bold"))
         self.style.configure("TLabel", background="#2E2E2E", foreground="white")
         self.style.configure("TCheckbutton", background="#2E2E2E", foreground="white", font=("Arial", 12))
         self.style.map("TCheckbutton",
@@ -54,6 +55,9 @@ class QuizApp:
         
         # Wyświetlanie wyniku
         self.setup_score_display()
+        
+        # Ustaw obsługę zmiany rozmiaru okna
+        self.root.bind("<Configure>", self.on_window_resize)
 
     def load_questions(self):
         try:
@@ -112,20 +116,43 @@ class QuizApp:
             messagebox.showerror("Błąd", f"Wystąpił błąd podczas wczytywania pytań: {str(e)}")
 
     def setup_layout(self):
+        # Główny układ - podział poziomy 1:4
+        self.root.columnconfigure(0, weight=1)
+        self.root.columnconfigure(1, weight=4)
+        self.root.rowconfigure(0, weight=1)
+        
         # Główne ramki
-        self.left_frame = ttk.Frame(self.root, width=300, style="TFrame")
-        self.left_frame.pack(side=tk.LEFT, fill=tk.Y, padx=10, pady=10)
+        self.left_frame = ttk.Frame(self.root, style="TFrame")
+        self.left_frame.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
         
         self.right_frame = ttk.Frame(self.root, style="TFrame")
-        self.right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10, pady=10)
+        self.right_frame.grid(row=0, column=1, sticky="nsew", padx=10, pady=10)
+        
+        # Konfiguracja ramki po prawej stronie - podział pionowy 3:2
+        self.right_frame.columnconfigure(0, weight=1)
+        self.right_frame.rowconfigure(0, weight=3)  # Koło zajmuje więcej miejsca
+        self.right_frame.rowconfigure(1, weight=2)  # Pytania zajmują mniej miejsca
         
         # Górna ramka na koło
         self.wheel_frame = ttk.Frame(self.right_frame, style="TFrame")
-        self.wheel_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True, padx=10, pady=10)
+        self.wheel_frame.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
         
         # Dolna ramka na pytania
         self.question_frame = ttk.Frame(self.right_frame, style="TFrame")
-        self.question_frame.pack(side=tk.BOTTOM, fill=tk.BOTH, expand=True, padx=10, pady=10)
+        self.question_frame.grid(row=1, column=0, sticky="nsew", padx=10, pady=10)
+        
+        # Ustawienie ramki koła
+        self.wheel_frame.columnconfigure(0, weight=1)
+        self.wheel_frame.rowconfigure(0, weight=1)
+        self.wheel_frame.rowconfigure(1, weight=0)
+        
+        # Płótno dla koła
+        self.wheel_canvas = tk.Canvas(
+            self.wheel_frame, 
+            bg="#2E2E2E",
+            highlightthickness=0
+        )
+        self.wheel_canvas.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
         
         # Przycisk do losowania
         self.spin_button = ttk.Button(
@@ -134,17 +161,13 @@ class QuizApp:
             command=self.spin_wheel,
             style="TButton"
         )
-        self.spin_button.pack(side=tk.BOTTOM, pady=20)
+        self.spin_button.grid(row=1, column=0, pady=(0, 10))
         
-        # Płótno dla koła
-        self.wheel_canvas = tk.Canvas(
-            self.wheel_frame, 
-            width=500, 
-            height=500, 
-            bg="#2E2E2E",
-            highlightthickness=0
-        )
-        self.wheel_canvas.pack(padx=20, pady=20)
+        # Ustawienie ramki pytań
+        self.question_frame.columnconfigure(0, weight=1)
+        self.question_frame.rowconfigure(0, weight=0)
+        self.question_frame.rowconfigure(1, weight=1)
+        self.question_frame.rowconfigure(2, weight=0)
         
         # Wyświetlanie pytania
         self.question_label = ttk.Label(
@@ -152,13 +175,50 @@ class QuizApp:
             text="Naciśnij przycisk aby wylosować kategorię i rozpocząć quiz!",
             wraplength=600,
             font=("Arial", 14),
-            style="TLabel"
+            style="TLabel",
+            justify="center"
         )
-        self.question_label.pack(pady=20)
+        self.question_label.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
         
-        # Ramka na opcje odpowiedzi
-        self.options_frame = ttk.Frame(self.question_frame, style="TFrame")
-        self.options_frame.pack(pady=20, fill=tk.X)
+        # Ramka na opcje odpowiedzi ze scrollem
+        self.options_container = ttk.Frame(self.question_frame, style="TFrame")
+        self.options_container.grid(row=1, column=0, sticky="nsew", padx=10, pady=10)
+        
+        self.options_container.columnconfigure(0, weight=1)
+        self.options_container.rowconfigure(0, weight=1)
+        
+        # Canvas i scrollbar dla opcji
+        self.options_canvas = tk.Canvas(
+            self.options_container,
+            bg="#2E2E2E",
+            highlightthickness=0
+        )
+        
+        self.options_scrollbar = ttk.Scrollbar(
+            self.options_container,
+            orient="vertical",
+            command=self.options_canvas.yview
+        )
+        
+        self.options_frame = ttk.Frame(
+            self.options_canvas, 
+            style="TFrame"
+        )
+        
+        self.options_canvas.configure(yscrollcommand=self.options_scrollbar.set)
+        self.options_canvas.grid(row=0, column=0, sticky="nsew")
+        self.options_scrollbar.grid(row=0, column=1, sticky="ns")
+        
+        self.options_window = self.options_canvas.create_window(
+            (0, 0),
+            window=self.options_frame,
+            anchor="nw",
+            width=self.options_canvas.winfo_width()
+        )
+        
+        # Obsługa zmiany rozmiaru dla scrollowania
+        self.options_frame.bind("<Configure>", self.on_options_frame_configure)
+        self.options_canvas.bind("<Configure>", self.on_canvas_configure)
         
         # Przycisk zatwierdzania
         self.submit_button = ttk.Button(
@@ -167,16 +227,51 @@ class QuizApp:
             command=self.check_answer,
             style="TButton"
         )
-        self.submit_button.pack(pady=20)
+        self.submit_button.grid(row=2, column=0, pady=10)
         self.submit_button.config(state=tk.DISABLED)  # Początkowo nieaktywny
 
+    def on_options_frame_configure(self, event):
+        # Aktualizacja regionu przewijania
+        self.options_canvas.configure(scrollregion=self.options_canvas.bbox("all"))
+    
+    def on_canvas_configure(self, event):
+        # Aktualizacja szerokości okna zawartości
+        self.options_canvas.itemconfig(self.options_window, width=event.width)
+    
+    def on_window_resize(self, event):
+        # Aktualizacja przy zmianie rozmiaru okna
+        if event.widget == self.root:
+            # Aktualizacja wraplength dla pytania
+            self.question_label.configure(wraplength=self.question_frame.winfo_width() - 40)
+            # Zmiana rozmiaru koła
+            self.resize_wheel()
+
+    def resize_wheel(self):
+        # Oblicz rozmiar koła tak, by mieściło się w dostępnej przestrzeni
+        width = self.wheel_canvas.winfo_width()
+        height = self.wheel_canvas.winfo_height()
+        
+        # Użyj mniejszego wymiaru, aby koło było całkowicie widoczne
+        wheel_size = min(width, height) - 20
+        
+        if wheel_size > 100:  # Minimalny rozmiar koła
+            self.wheel_center_x = width // 2
+            self.wheel_center_y = height // 2
+            self.wheel_radius = wheel_size // 2 - 10
+            
+            # Przerysuj koło
+            self.draw_wheel()
+
     def init_wheel(self):
+        # Początkowe ustawienia koła
         self.wheel_center_x = 250
         self.wheel_center_y = 250
         self.wheel_radius = 200
-        
-        # Rysuj koło
         self.draw_wheel()
+        
+        # Uruchom resize_wheel po pierwszym wyświetleniu GUI
+        self.root.update()
+        self.resize_wheel()
 
     def draw_wheel(self):
         self.wheel_canvas.delete("all")
@@ -190,13 +285,17 @@ class QuizApp:
         
         self.category_items = []
         
+        # Narysuj koło z segmentami
         for i, category in enumerate(self.categories):
             start_angle = self.angle + i * angle_per_category
             end_angle = start_angle + angle_per_category
             
             # Utwórz sekcję koła
             section = self.wheel_canvas.create_arc(
-                50, 50, 450, 450,
+                self.wheel_center_x - self.wheel_radius,
+                self.wheel_center_y - self.wheel_radius,
+                self.wheel_center_x + self.wheel_radius,
+                self.wheel_center_y + self.wheel_radius,
                 start=start_angle, 
                 extent=angle_per_category,
                 fill=self.category_colors[category],
@@ -221,16 +320,23 @@ class QuizApp:
                 self.category_items.append(icon)
         
         # Narysuj środkowe koło
+        center_radius = self.wheel_radius * 0.1
         center_circle = self.wheel_canvas.create_oval(
-            225, 225, 275, 275,
+            self.wheel_center_x - center_radius,
+            self.wheel_center_y - center_radius,
+            self.wheel_center_x + center_radius,
+            self.wheel_center_y + center_radius,
             fill="#2E2E2E",
             outline="white",
             width=2
         )
         
         # Narysuj wskaźnik
+        pointer_size = self.wheel_radius * 0.1
         pointer = self.wheel_canvas.create_polygon(
-            250, 30, 240, 50, 260, 50,
+            self.wheel_center_x, self.wheel_center_y - self.wheel_radius - pointer_size,
+            self.wheel_center_x - pointer_size, self.wheel_center_y - self.wheel_radius + pointer_size,
+            self.wheel_center_x + pointer_size, self.wheel_center_y - self.wheel_radius + pointer_size,
             fill="#FF3333",
             outline="white",
             width=2
@@ -296,9 +402,13 @@ class QuizApp:
         )
         legend_title.pack(pady=(0, 20))
         
+        # Ramka dla kategorii - bez przewijania
+        legend_frame = ttk.Frame(self.left_frame, style="TFrame")
+        legend_frame.pack(fill=tk.BOTH, expand=True)
+        
         # Utwórz ramkę dla każdej kategorii w legendzie
         for category in self.categories:
-            category_frame = ttk.Frame(self.left_frame, style="TFrame")
+            category_frame = ttk.Frame(legend_frame, style="TFrame")
             category_frame.pack(fill=tk.X, pady=5)
             
             # Wskaźnik koloru
@@ -414,32 +524,27 @@ class QuizApp:
             error_label.pack(pady=10)
             return
         
-        # Utwórz ramkę dla każdej opcji, aby lepiej kontrolować wygląd
+        # Utwórz opcje jako checkboxy (bez wraplength - przyczyna błędu)
         for i, option in enumerate(self.current_question["options"]):
             var = tk.BooleanVar()
             self.answer_vars.append(var)
             
+            # Utwórz ramkę dla opcji
             option_frame = ttk.Frame(self.options_frame, style="TFrame")
-            option_frame.pack(fill=tk.X, pady=5)
+            option_frame.pack(fill=tk.X, pady=5, padx=5)
             
-            # Dodaj numer opcji dla łatwiejszej identyfikacji
-            option_num = ttk.Label(
-                option_frame,
-                text=f"Opcja {i+1}:",
-                width=8,
-                foreground="#FF3333",  # Neonowa czerwień dla lepszej widoczności
-                style="TLabel"
-            )
-            option_num.pack(side=tk.LEFT, padx=(0, 10))
-            
-            # Dodaj wyraźny checkbox z lepszym kontrastem
+            # Dodaj numer opcji i checkbox
             option_cb = ttk.Checkbutton(
                 option_frame,
-                text=option,
+                text=f"Opcja {i+1}: {option}",
                 variable=var,
                 style="TCheckbutton"
             )
-            option_cb.pack(side=tk.LEFT, padx=5)
+            option_cb.pack(side=tk.LEFT, anchor="w", padx=5)
+        
+        # Aktualizuj scrollregion
+        self.options_frame.update_idletasks()
+        self.options_canvas.configure(scrollregion=self.options_canvas.bbox("all"))
         
         # Włącz przycisk zatwierdzania
         self.submit_button.config(state=tk.NORMAL)

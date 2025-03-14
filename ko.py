@@ -7,7 +7,7 @@ from PIL import Image, ImageTk
 import time
 
 # Stałe kolorystyczne – możesz je zmieniać według własnego gustu
-BG_COLOR = "#f8f0f0"
+BG_COLOR = "#f0f0f0"
 LEGEND_BG = "#d0e1f9"
 HIGHLIGHT_COLOR = "#a0c4ff"
 QUESTION_BG = "#ffffff"

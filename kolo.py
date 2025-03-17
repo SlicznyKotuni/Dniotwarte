@@ -6,25 +6,26 @@ import math
 import os
 from PIL import Image, ImageTk
 import time
+import colorsys
 
 class QuizApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Quiz z Losowaniem Kategorii")
         self.root.geometry("1200x800")
-        self.root.configure(bg="#2E2E2E")  # Ciepły grafitowy
+        self.root.configure(bg="#0D0D1A")  # Ciemny tło typu cyber
         self.root.minsize(800, 600)  # Minimalna wielkość okna
         
         # Konfiguracja stylu
         self.style = ttk.Style()
         self.style.theme_use("clam")
-        self.style.configure("TFrame", background="#2E2E2E")
-        self.style.configure("TButton", background="#2E2E2E", foreground="#FF3333", font=("Arial", 12, "bold"))
-        self.style.configure("TLabel", background="#2E2E2E", foreground="white")
-        self.style.configure("TCheckbutton", background="#2E2E2E", foreground="white", font=("Arial", 12))
+        self.style.configure("TFrame", background="#0D0D1A")
+        self.style.configure("TButton", background="#0D0D1A", foreground="#00FFFF", font=("Arial", 12, "bold"))
+        self.style.configure("TLabel", background="#0D0D1A", foreground="#E0E0FF")
+        self.style.configure("TCheckbutton", background="#0D0D1A", foreground="#E0E0FF", font=("Arial", 12))
         self.style.map("TCheckbutton",
-            background=[('active', '#3E3E3E')],
-            foreground=[('active', '#FF3333')]
+            background=[('active', '#1A1A2E')],
+            foreground=[('active', '#00FFFF')]
         )
         
         # Zmienne
@@ -40,6 +41,12 @@ class QuizApp:
         self.selected_category = None
         self.category_items = []  # Elementy na kole
         self.answer_vars = []  # Dla wielokrotnego wyboru
+        
+        # Zmienne dla efektów neonowych
+        self.pulse_intensity = 0
+        self.pulse_direction = 1
+        self.neon_glow_ids = []
+        self.neon_animation_running = False
         
         # Wczytaj pytania z CSV
         self.load_questions()
@@ -58,6 +65,9 @@ class QuizApp:
         
         # Ustaw obsługę zmiany rozmiaru okna
         self.root.bind("<Configure>", self.on_window_resize)
+        
+        # Rozpocznij animację neonu
+        self.start_neon_animation()
 
     def load_questions(self):
         try:
@@ -95,10 +105,10 @@ class QuizApp:
             # Wyświetl podsumowanie wczytanych danych
             print(f"Wczytano {len(self.questions)} pytań w {len(self.categories)} kategoriach")
                 
-            # Przypisz kolory do kategorii
-            colors = ["#FF3333", "#33FF33", "#3333FF", "#FFFF33", "#FF33FF", "#33FFFF", "#FF9933", "#9933FF"]
+            # Przypisz neonowe kolory do kategorii
+            neon_colors = ["#00FFFF", "#FF00FF", "#00FF00", "#FFFF00", "#FF3399", "#33CCFF", "#FF6600", "#CC99FF"]
             for i, category in enumerate(self.categories):
-                self.category_colors[category] = colors[i % len(colors)]
+                self.category_colors[category] = neon_colors[i % len(neon_colors)]
                 
                 # Wczytaj ikony kategorii
                 icon_path = f"assets/{category}.png"
@@ -149,12 +159,12 @@ class QuizApp:
         # Płótno dla koła
         self.wheel_canvas = tk.Canvas(
             self.wheel_frame, 
-            bg="#2E2E2E",
+            bg="#0D0D1A",
             highlightthickness=0
         )
         self.wheel_canvas.grid(row=0, column=0, sticky="nsew", padx=10, pady=10)
         
-        # Przycisk do losowania
+        # Przycisk do losowania - cybernetyczny wygląd
         self.spin_button = ttk.Button(
             self.wheel_frame, 
             text="LOSUJ KATEGORIĘ", 
@@ -190,7 +200,7 @@ class QuizApp:
         # Canvas i scrollbar dla opcji
         self.options_canvas = tk.Canvas(
             self.options_container,
-            bg="#2E2E2E",
+            bg="#0D0D1A",
             highlightthickness=0
         )
         
@@ -220,7 +230,7 @@ class QuizApp:
         self.options_frame.bind("<Configure>", self.on_options_frame_configure)
         self.options_canvas.bind("<Configure>", self.on_canvas_configure)
         
-        # Przycisk zatwierdzania
+        # Przycisk zatwierdzania - cybernetyczny wygląd
         self.submit_button = ttk.Button(
             self.question_frame, 
             text="ZATWIERDŹ ODPOWIEDŹ", 
@@ -273,8 +283,68 @@ class QuizApp:
         self.root.update()
         self.resize_wheel()
 
+    def create_neon_glow(self, x1, y1, x2, y2, color, width=2, tags=None):
+        # Utwórz efekt neonu z gradientem
+        glow_colors = []
+        intensity = self.pulse_intensity
+        
+        # Konwersja koloru HEX do RGB
+        r = int(color[1:3], 16)
+        g = int(color[3:5], 16)
+        b = int(color[5:7], 16)
+        
+        # Tworzenie gradientu kolorów dla poświaty
+        for i in range(3):
+            # Adjust color intensity based on pulse
+            r_adj = min(255, int(r * (0.5 + intensity * 0.5)))
+            g_adj = min(255, int(g * (0.5 + intensity * 0.5)))
+            b_adj = min(255, int(b * (0.5 + intensity * 0.5)))
+            
+            glow_hex = f"#{r_adj:02x}{g_adj:02x}{b_adj:02x}"
+            glow_colors.append(glow_hex)
+            
+            # Zmniejsz intensywność dla kolejnych warstw
+            intensity *= 0.7
+        
+        # Rysuj warstwy poświaty od zewnątrz do środka
+        glow_ids = []
+        for i in range(3):
+            glow_width = width + (3-i) * 4
+            
+            # Tagi dla identyfikacji elementów
+            item_tags = tags if tags else []
+            if isinstance(item_tags, str):
+                item_tags = [item_tags]
+            item_tags.append("neon_glow")
+            
+            glow_id = self.wheel_canvas.create_arc(
+                x1-i*3, y1-i*3, x2+i*3, y2+i*3,
+                outline=glow_colors[i], width=glow_width,
+                start=0, extent=359.99, style="arc",
+                tags=item_tags
+            )
+            glow_ids.append(glow_id)
+        
+        return glow_ids
+#
     def draw_wheel(self):
         self.wheel_canvas.delete("all")
+        
+        # Tło koła - gradient od centrum
+        # Tworzymy efekt ciemnego gradientu cyberprzestrzeni
+        for r in range(self.wheel_radius, 0, -5):
+            # Kolor tła zmienia się od ciemnego niebieskiego do czarnego
+            ratio = r / self.wheel_radius
+            color_value = int(25 * ratio)
+            color = f"#{color_value:02x}{color_value:02x}{color_value + 10:02x}"
+            
+            self.wheel_canvas.create_oval(
+                self.wheel_center_x - r,
+                self.wheel_center_y - r,
+                self.wheel_center_x + r,
+                self.wheel_center_y + r,
+                outline=color, width=5, fill=""
+            )
         
         # Rysuj koło z sekcjami kategorii
         if not self.categories:
@@ -284,11 +354,31 @@ class QuizApp:
         angle_per_category = 360 / num_categories
         
         self.category_items = []
+        self.neon_glow_ids = []
         
         # Narysuj koło z segmentami
         for i, category in enumerate(self.categories):
             start_angle = self.angle + i * angle_per_category
             end_angle = start_angle + angle_per_category
+            
+            # Utwórz sekcję koła z efektem cybernetycznym
+            # Dodaj promieniste linie w segmencie dla efektu cyber
+            for j in range(int(angle_per_category/12)):
+                line_angle = start_angle + j * 12
+                line_angle_rad = math.radians(line_angle)
+                
+                inner_x = self.wheel_center_x + (self.wheel_radius * 0.4) * math.cos(line_angle_rad)
+                inner_y = self.wheel_center_y + (self.wheel_radius * 0.4) * math.sin(line_angle_rad)
+                outer_x = self.wheel_center_x + (self.wheel_radius * 0.95) * math.cos(line_angle_rad)
+                outer_y = self.wheel_center_y + (self.wheel_radius * 0.95) * math.sin(line_angle_rad)
+                
+                line_color = self.category_colors[category]
+                line_id = self.wheel_canvas.create_line(
+                    inner_x, inner_y, outer_x, outer_y,
+                    fill=line_color, width=1, 
+                    tags=f"line_{category}"
+                )
+                self.category_items.append(line_id)
             
             # Utwórz sekcję koła
             section = self.wheel_canvas.create_arc(
@@ -298,12 +388,24 @@ class QuizApp:
                 self.wheel_center_y + self.wheel_radius,
                 start=start_angle, 
                 extent=angle_per_category,
-                fill=self.category_colors[category],
-                outline="white",
+                fill="",
+                outline=self.category_colors[category],
                 width=2,
                 tags=f"section_{category}"
             )
             self.category_items.append(section)
+            
+            # Dodaj efekt neonowej poświaty
+            glow_ids = self.create_neon_glow(
+                self.wheel_center_x - self.wheel_radius,
+                self.wheel_center_y - self.wheel_radius,
+                self.wheel_center_x + self.wheel_radius,
+                self.wheel_center_y + self.wheel_radius,
+                self.category_colors[category],
+                width=2,
+                tags=[f"glow_{category}", f"section_{category}"]
+            )
+            self.neon_glow_ids.extend(glow_ids)
             
             # Oblicz pozycję dla ikony kategorii
             mid_angle_rad = math.radians(start_angle + angle_per_category / 2)
@@ -318,29 +420,115 @@ class QuizApp:
                     tags=f"icon_{category}"
                 )
                 self.category_items.append(icon)
+            
+            # Dodaj tekst kategorii
+            text_x = self.wheel_center_x + (self.wheel_radius * 0.85) * math.cos(mid_angle_rad)
+            text_y = self.wheel_center_y + (self.wheel_radius * 0.85) * math.sin(mid_angle_rad)
+            
+            text_id = self.wheel_canvas.create_text(
+                text_x, text_y,
+                text=category,
+                fill="#FFFFFF",
+                font=("Arial", 10, "bold"),
+                angle=start_angle + angle_per_category/2 + 90 if start_angle < 180 else start_angle + angle_per_category/2 - 90,
+                tags=f"text_{category}"
+            )
+            self.category_items.append(text_id)
         
-        # Narysuj środkowe koło
-        center_radius = self.wheel_radius * 0.1
-        center_circle = self.wheel_canvas.create_oval(
-            self.wheel_center_x - center_radius,
-            self.wheel_center_y - center_radius,
-            self.wheel_center_x + center_radius,
-            self.wheel_center_y + center_radius,
-            fill="#2E2E2E",
-            outline="white",
-            width=2
+        # Narysuj środkowe koło z efektem cyber
+        for r in range(int(self.wheel_radius * 0.25), 0, -3):
+            ratio = r / (self.wheel_radius * 0.25)
+            blue_value = int(200 * ratio)
+            center_color = f"#00{blue_value:02x}ff"
+            
+            center_circle = self.wheel_canvas.create_oval(
+                self.wheel_center_x - r,
+                self.wheel_center_y - r,
+                self.wheel_center_x + r,
+                self.wheel_center_y + r,
+                outline=center_color,
+                width=2,
+                fill=""
+            )
+        
+        # Dodaj neonową poświatę wokół środka koła
+        center_glow_ids = self.create_neon_glow(
+            self.wheel_center_x - self.wheel_radius * 0.25,
+            self.wheel_center_y - self.wheel_radius * 0.25,
+            self.wheel_center_x + self.wheel_radius * 0.25,
+            self.wheel_center_y + self.wheel_radius * 0.25,
+            "#00FFFF",
+            width=3,
+            tags="center_glow"
         )
+        self.neon_glow_ids.extend(center_glow_ids)
         
-        # Narysuj wskaźnik
+        # Narysuj wskaźnik z efektem neonowym
         pointer_size = self.wheel_radius * 0.1
         pointer = self.wheel_canvas.create_polygon(
             self.wheel_center_x, self.wheel_center_y - self.wheel_radius - pointer_size,
             self.wheel_center_x - pointer_size, self.wheel_center_y - self.wheel_radius + pointer_size,
             self.wheel_center_x + pointer_size, self.wheel_center_y - self.wheel_radius + pointer_size,
-            fill="#FF3333",
+            fill="#00FFFF",
             outline="white",
-            width=2
+            width=2,
+            tags="pointer"
         )
+        
+        # Dodaj neonową poświatę do wskaźnika
+        pointer_glow = self.wheel_canvas.create_polygon(
+            self.wheel_center_x, self.wheel_center_y - self.wheel_radius - pointer_size - 5,
+            self.wheel_center_x - pointer_size - 5, self.wheel_center_y - self.wheel_radius + pointer_size + 5,
+            self.wheel_center_x + pointer_size + 5, self.wheel_center_y - self.wheel_radius + pointer_size + 5,
+            fill="",
+            outline="#00FFFF",
+            width=3,
+            tags="pointer_glow"
+        )
+        self.neon_glow_ids.append(pointer_glow)
+        
+        # Dodaj linie przecinające koło dla efektu cyber
+        for angle in range(0, 360, 45):
+            angle_rad = math.radians(angle)
+            x1 = self.wheel_center_x + (self.wheel_radius * 0.25) * math.cos(angle_rad)
+            y1 = self.wheel_center_y + (self.wheel_radius * 0.25) * math.sin(angle_rad)
+            x2 = self.wheel_center_x + self.wheel_radius * math.cos(angle_rad)
+            y2 = self.wheel_center_y + self.wheel_radius * math.sin(angle_rad)
+            
+            line = self.wheel_canvas.create_line(
+                x1, y1, x2, y2,
+                fill="#004466",
+                width=1,
+                dash=(5, 3),
+                tags="cyber_line"
+            )
+
+    def start_neon_animation(self):
+        """Rozpoczyna animację pulsowania neonów"""
+        if not self.neon_animation_running:
+            self.neon_animation_running = True
+            self.animate_neon()
+    
+    def animate_neon(self):
+        """Animuje efekt pulsowania neonów"""
+        # Aktualizuj intensywność pulsowania
+        self.pulse_intensity += 0.05 * self.pulse_direction
+        
+        # Zmień kierunek pulsowania na granicznych wartościach
+        if self.pulse_intensity >= 1.0:
+            self.pulse_intensity = 1.0
+            self.pulse_direction = -1
+        elif self.pulse_intensity <= 0.3:
+            self.pulse_intensity = 0.3
+            self.pulse_direction = 1
+        
+        # Aktualizuj kolory wszystkich elementów neonowych
+        if hasattr(self, 'wheel_canvas'):
+            # Przerysuj koło z nową intensywnością
+            self.draw_wheel()
+            
+            # Kontynuuj animację
+            self.root.after(50, self.animate_neon)
 
     def spin_wheel(self):
         if self.spinning:
@@ -359,16 +547,46 @@ class QuizApp:
         # Początkowa wysoka prędkość
         speed = 10
         
+        # Efekt neonowego śladu podczas kręcenia
+        trail_ids = []
+        
         def animate_spin():
-            nonlocal speed, total_angle
+            nonlocal speed, total_angle, trail_ids
             
             if total_angle > 0 and speed > 0.2:
                 # Aktualizuj kąt
                 self.angle = (self.angle + speed) % 360
                 total_angle -= speed
                 
+                # Usuń stare ślady
+                for trail_id in trail_ids:
+                    self.wheel_canvas.delete(trail_id)
+                trail_ids = []
+                
                 # Przerysuj koło
                 self.draw_wheel()
+                
+                # Dodaj efekt śladu ruchu
+                if speed > 5:
+                    for i, category in enumerate(self.categories):
+                        angle_per_category = 360 / len(self.categories)
+                        start_angle = (self.angle - speed*2) + i * angle_per_category
+                        end_angle = start_angle + angle_per_category
+                        
+                        trail = self.wheel_canvas.create_arc(
+                            self.wheel_center_x - self.wheel_radius,
+                            self.wheel_center_y - self.wheel_radius,
+                            self.wheel_center_x + self.wheel_radius,
+                            self.wheel_center_y + self.wheel_radius,
+                            start=start_angle, 
+                            extent=angle_per_category,
+                            outline=self.category_colors[category],
+                            width=1,
+                            style="arc",
+                            dash=(3, 5),
+                            tags="trail"
+                        )
+                        trail_ids.append(trail)
                 
                 # Spowolnij
                 speed *= slow_down
@@ -379,6 +597,10 @@ class QuizApp:
                 # Zakończ kręcenie
                 self.spinning = False
                 self.spin_button.config(state=tk.NORMAL)
+                
+                # Usuń ślady
+                for trail_id in trail_ids:
+                    self.wheel_canvas.delete(trail_id)
                 
                 # Określ wybraną kategorię
                 category_index = int(((self.angle + 180) % 360) / (360 / len(self.categories)))
@@ -392,89 +614,123 @@ class QuizApp:
         
         animate_spin()
 
-    def create_legend(self):
-        # Tytuł legendy
-        legend_title = ttk.Label(
-            self.left_frame, 
-            text="KATEGORIE", 
-            font=("Arial", 16, "bold"),
+   def create_legend(self):
+    # Tytuł legendy z neonowym efektem
+    legend_title = ttk.Label(
+        self.left_frame, 
+        text="KATEGORIE", 
+        font=("Arial", 16, "bold"),
+        foreground="#00FFFF",
+        style="TLabel"
+    )
+    legend_title.pack(pady=(0, 20))
+    
+    # Ramka dla kategorii - bez przewijania
+    legend_frame = ttk.Frame(self.left_frame, style="TFrame")
+    legend_frame.pack(fill=tk.BOTH, expand=True)
+    
+    # Utwórz ramkę dla każdej kategorii w legendzie z cybernetycznym wyglądem
+    for category in self.categories:
+        # Tutaj był błąd - poprawna definicja category_frame
+        category_frame = ttk.Frame(legend_frame, style="TFrame")
+        category_frame.pack(fill=tk.X, pady=5)
+        
+        # Wskaźnik koloru - neonowe obramowanie
+        color_frame = ttk.Frame(category_frame, style="TFrame")
+        color_frame.pack(side=tk.LEFT, padx=5)
+        
+        color_canvas = tk.Canvas(
+            color_frame, 
+            width=25, 
+            height=25, 
+            bg="#0D0D1A",
+            highlightthickness=1,
+            highlightbackground=self.category_colors[category]
+        )
+        color_canvas.pack()
+        
+        # Dodaj efekt świecenia do koloru
+        glow_size = 15
+        for i in range(3):
+            size = glow_size - i*3
+            color_canvas.create_oval(
+                12-size/2, 12-size/2, 
+                12+size/2, 12+size/2,
+                outline=self.category_colors[category],
+                width=2-i*0.5,
+                fill=""
+            )
+        
+        # Ikona jeśli dostępna
+        if self.category_icons.get(category):
+            icon_frame = ttk.Frame(category_frame, style="TFrame")
+            icon_frame.pack(side=tk.LEFT, padx=5)
+            
+            icon_label = ttk.Label(icon_frame, image=self.category_icons[category])
+            icon_label.pack()
+        
+        # Nazwa kategorii z neonowym efektem
+        name_label = ttk.Label(
+            category_frame, 
+            text=category, 
+            foreground="#E0E0FF",
+            font=("Arial", 12, "bold"),
             style="TLabel"
         )
-        legend_title.pack(pady=(0, 20))
+        name_label.pack(side=tk.LEFT, padx=5)
         
-        # Ramka dla kategorii - bez przewijania
-        legend_frame = ttk.Frame(self.left_frame, style="TFrame")
-        legend_frame.pack(fill=tk.BOTH, expand=True)
-        
-        # Utwórz ramkę dla każdej kategorii w legendzie
-        for category in self.categories:
-            category_frame = ttk.Frame(legend_frame, style="TFrame")
-            category_frame.pack(fill=tk.X, pady=5)
-            
-            # Wskaźnik koloru
-            color_indicator = tk.Canvas(
-                category_frame, 
-                width=20, 
-                height=20, 
-                bg=self.category_colors[category],
-                highlightthickness=0
-            )
-            color_indicator.pack(side=tk.LEFT, padx=5)
-            
-            # Ikona jeśli dostępna
-            if self.category_icons.get(category):
-                icon_label = ttk.Label(category_frame, image=self.category_icons[category])
-                icon_label.pack(side=tk.LEFT, padx=5)
-            
-            # Nazwa kategorii
-            name_label = ttk.Label(
-                category_frame, 
-                text=category, 
-                style="TLabel"
-            )
-            name_label.pack(side=tk.LEFT, padx=5)
-            
-            # Zapisz referencje do podświetlania
-            category_frame.color_indicator = color_indicator
-            category_frame.name_label = name_label
-            setattr(self, f"legend_{category}", category_frame)
+        # Zapisz referencje do podświetlania
+        category_frame.color_canvas = color_canvas
+        category_frame.name_label = name_label
+        setattr(self, f"legend_{category}", category_frame)
 
     def highlight_category(self, category):
         # Zresetuj wszystkie kategorie w legendzie
         for cat in self.categories:
             cat_frame = getattr(self, f"legend_{cat}")
-            cat_frame.name_label.configure(foreground="white")
-            cat_frame.configure(style="TFrame")
+            cat_frame.name_label.configure(foreground="#E0E0FF")
         
         # Podświetl wybraną kategorię
         selected_frame = getattr(self, f"legend_{category}")
-        selected_frame.name_label.configure(foreground="#FF3333")  # Neonowa czerwień
+        selected_frame.name_label.configure(foreground=self.category_colors[category])  # Neonowy kolor
         
         # Dodaj efekt podświetlenia
         self.root.update()  # Upewnij się, że UI jest zaktualizowane przed efektem błysku
         
-        # Efekt błysku
-        for _ in range(3):
-            selected_frame.name_label.configure(foreground="#FF3333")
-            self.root.update()
-            time.sleep(0.2)
-            selected_frame.name_label.configure(foreground="white")
-            self.root.update()
-            time.sleep(0.2)
+        # Efekt błysku z cybernetycznym wyglądem
+        flash_colors = ["#FFFFFF", self.category_colors[category]]
+        for _ in range(5):  # Więcej powtórzeń dla lepszego efektu
+            for color in flash_colors:
+                selected_frame.name_label.configure(foreground=color)
+                selected_frame.color_canvas.configure(highlightbackground=color)
+                self.root.update()
+                time.sleep(0.1)
         
-        selected_frame.name_label.configure(foreground="#FF3333")  # Ustaw końcowy stan na podświetlony
+        # Ustaw końcowy stan na podświetlony
+        selected_frame.name_label.configure(foreground=self.category_colors[category])
+        selected_frame.color_canvas.configure(highlightbackground=self.category_colors[category])
 
     def setup_score_display(self):
-        # Utwórz ramkę dla wyświetlania wyniku
+        # Utwórz ramkę dla wyświetlania wyniku z cybernetycznym wyglądem
         score_frame = ttk.Frame(self.left_frame, style="TFrame")
         score_frame.pack(side=tk.BOTTOM, fill=tk.X, pady=20)
+        
+        # Tytuł sekcji
+        score_title = ttk.Label(
+            score_frame,
+            text="WYNIKI",
+            font=("Arial", 14, "bold"),
+            foreground="#00FFFF",
+            style="TLabel"
+        )
+        score_title.pack(pady=(0, 10))
         
         # Licznik poprawnych odpowiedzi
         self.correct_label = ttk.Label(
             score_frame, 
             text="Poprawne: 0", 
-            font=("Arial", 12),
-            foreground="#33FF33",  # Zielony dla poprawnych
+            font=("Arial", 12, "bold"),
+            foreground="#00FF00",  # Neonowy zielony
             style="TLabel"
         )
         self.correct_label.pack(pady=5)
@@ -483,11 +739,20 @@ class QuizApp:
         self.incorrect_label = ttk.Label(
             score_frame, 
             text="Niepoprawne: 0", 
-            font=("Arial", 12),
-            foreground="#FF3333",  # Czerwony dla niepoprawnych
+            font=("Arial", 12, "bold"),
+            foreground="#FF00FF",  # Neonowy różowy
             style="TLabel"
         )
         self.incorrect_label.pack(pady=5)
+        
+        # Dodaj dekoracyjne linie cyber
+        cyber_canvas = tk.Canvas(score_frame, height=30, bg="#0D0D1A", highlightthickness=0)
+        cyber_canvas.pack(fill=tk.X, pady=10)
+        
+        for i in range(5):
+            y = 15
+            cyber_canvas.create_line(0, y, cyber_canvas.winfo_reqwidth(), y, 
+                                    fill="#00FFFF", dash=(10, 5))
 
     def update_score_display(self):
         self.correct_label.config(text=f"Poprawne: {self.correct_count}")
@@ -504,8 +769,12 @@ class QuizApp:
         # Wybierz losowe pytanie
         self.current_question = random.choice(category_questions)
         
-        # Zaktualizuj wyświetlanie pytania
-        self.question_label.config(text=self.current_question["text"], foreground="white")
+        # Zaktualizuj wyświetlanie pytania z cybernetycznym stylem
+        self.question_label.config(
+            text=self.current_question["text"], 
+            foreground="#E0E0FF",
+            font=("Arial", 14, "bold")
+        )
         
         # Wyczyść poprzednie opcje
         for widget in self.options_frame.winfo_children():
@@ -518,35 +787,45 @@ class QuizApp:
             error_label = ttk.Label(
                 self.options_frame,
                 text="Błąd: Brak opcji odpowiedzi!",
-                foreground="#FF3333",
+                foreground="#FF00FF",
                 style="TLabel"
             )
             error_label.pack(pady=10)
             return
         
-        # Utwórz opcje jako checkboxy (bez wraplength - przyczyna błędu)
+        # Utwórz opcje jako checkboxy z cybernetycznym stylem
         for i, option in enumerate(self.current_question["options"]):
             var = tk.BooleanVar()
             self.answer_vars.append(var)
             
-            # Utwórz ramkę dla opcji
+            # Utwórz ramkę dla opcji z neonowym obramowaniem
             option_frame = ttk.Frame(self.options_frame, style="TFrame")
-            option_frame.pack(fill=tk.X, pady=5, padx=5)
+            option_frame.pack(fill=tk.X, pady=8, padx=5)
             
-            # Dodaj numer opcji i checkbox
-            option_cb = ttk.Checkbutton(
+            # Dodaj neonowe obramowanie
+            option_canvas = tk.Canvas(
                 option_frame,
+                bg="#0D0D1A",
+                highlightthickness=1,
+                highlightbackground="#00AAFF",
+                height=40
+            )
+            option_canvas.pack(fill=tk.X, padx=5, pady=3)
+            
+            # Dodaj checkbox i tekst
+            option_cb = ttk.Checkbutton(
+                option_canvas,
                 text=f"Opcja {i+1}: {option}",
                 variable=var,
                 style="TCheckbutton"
             )
-            option_cb.pack(side=tk.LEFT, anchor="w", padx=5)
+            option_cb.place(x=10, y=8)
         
         # Aktualizuj scrollregion
         self.options_frame.update_idletasks()
         self.options_canvas.configure(scrollregion=self.options_canvas.bbox("all"))
         
-        # Włącz przycisk zatwierdzania
+        # Włącz przycisk zatwierdzania z neonowym efektem
         self.submit_button.config(state=tk.NORMAL)
 
     def check_answer(self):
@@ -563,7 +842,7 @@ class QuizApp:
         if correct:
             self.correct_count += 1
             result_text = "Poprawna odpowiedź!"
-            result_color = "#33FF33"  # Zielony
+            result_color = "#00FF00"  # Neonowy zielony
         else:
             self.incorrect_count += 1
             
@@ -572,25 +851,40 @@ class QuizApp:
             correct_text = ", ".join(correct_options)
             
             result_text = f"Niepoprawna odpowiedź! Prawidłowe odpowiedzi: {correct_text}"
-            result_color = "#FF3333"  # Czerwony
+            result_color = "#FF00FF"  # Neonowy różowy
         
         # Zaktualizuj wyświetlanie wyniku
         self.update_score_display()
         
-        # Pokaż wynik
-        self.question_label.config(text=result_text, foreground=result_color)
+        # Pokaż wynik z efektem neonowym
+        self.question_label.config(text=result_text, foreground=result_color, font=("Arial", 16, "bold"))
         
         # Tymczasowo wyłącz przycisk zatwierdzania
         self.submit_button.config(state=tk.DISABLED)
         
-        # Po opóźnieniu, zresetuj dla następnego pytania
-        self.root.after(3000, self.reset_for_next_question)
+        # Dodaj efekt błysku dla całego obszaru pytania
+        original_bg = self.question_frame["background"]
+        
+        def flash_background(count=0):
+            if count < 5:  # 5 mignięć
+                # Zmień tło na kolor wyniku z niską intensywnością
+                flash_color = result_color if count % 2 == 0 else "#0D0D1A"
+                self.question_frame.configure(background=flash_color)
+                self.root.after(200, flash_background, count + 1)
+            else:
+                # Przywróć oryginalne tło
+                self.question_frame.configure(background=original_bg)
+                # Po opóźnieniu, zresetuj dla następnego pytania
+                self.root.after(1000, self.reset_for_next_question)
+        
+        flash_background()
 
     def reset_for_next_question(self):
-        # Zresetuj etykietę pytania
+        # Zresetuj etykietę pytania z cybernetycznym stylem
         self.question_label.config(
             text="Naciśnij przycisk aby wylosować kolejną kategorię!",
-            foreground="white"
+            foreground="#00FFFF",
+            font=("Arial", 14)
         )
         
         # Wyczyść opcje

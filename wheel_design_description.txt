@@ -1,5 +1,0 @@
-The new wheel design should feature:
-- A dark background with a gradient effect, transitioning from deep blue to black.
-- Bright, colorful segments for each category, using colors like teal, purple, and orange.
-- Visual effects such as a glowing outline around the wheel and subtle animations to enhance the spinning effect.
-- Clear, bold text for category names on each segment, ensuring readability against the dark background.

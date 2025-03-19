@@ -1,65 +1,117 @@
 Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Option 5,Correct Answer,Time in seconds,Image Link,Category
-Ile procesor CPU ma poziomów pamięci cache?,Multiple Choice,1,2,3,4,,3,20,,Sieci_komputerowe
-Windows Defender,Multiple Choice,Security center,World trade center,,,,1,20,,Sieci_komputerowe
-Jakie są architektury procesorów?,Multiple Choice,ARM,x86,BRM,AMD,,1.2,20,,Sieci_komputerowe
-Rozwiń skrót DNS,Multiple Choice,Digital Network Service,Data Navigation System,Dynamic Node Structure,Domain Name System,,4,20,,Sieci_komputerowe
-Jakie są rodzaje kart NVIDIA,Multiple Choice,RTX,GTX,RX,RXT,GT,"1,2,5",120,,Sieci_komputerowe
-Co oznacz symbol F przy nazwie procesora Intel Core?,Multiple Choice,Możliwość podkręcania (overclocking),Brak wbudowanego układu graficznego,Lepsza wydajność,Wbudowany układ graficzny,,2,20,,Sieci_komputerowe
-jaka jest najlepsza przeglądarka ,,krawędź,Google chroma,ognisty lis,odważny,,3,,,Sieci_komputerowe
-Czym jest kabel RJ45,Multiple Choice,Kabel Ethernet,Kabel zasilania,to nie kabel,8P8C,,3,20,,Sieci_komputerowe
-do czego służy kabel 8P8C,Checkbox,to nie kabel,takie cos nie istnieje,Ethernet,zamiennik USB 3.0,,3,20,,Sieci_komputerowe
-Co mowi informatyk jak dostanie prezent?,Multiple Choice,110101010101010010101,"if a=""prezent"": print(""Dziękuję bardzo"") else: print(""😭"")",Dziękuję za pamięć,Falgmxłg ac stgagów <3 (klucz 3),,"2,3,4",20,,Sieci_komputerowe
-Ile kosztuje winrar?,Multiple Choice,tak,nie,on kosztuje???!?!?!,,,"2,3",20,,Sieci_komputerowe
-"Twój kolega wyciąga niebezpiecznie pendrive, co robisz?",Multiple Choice,dzwonie na 112,"pisze SMS o treści ""POMOC"" na numer 1919","tłumaczę człowiekowi, ze mógł uszkodzić pendrive","Rekreacja Mk 15, 6-15",,3,20,,Sieci_komputerowe
-Czy rok 2025 to rok linuxa?,Multiple Choice,tak,odpowiedź A,odpowiedź B,linux krulem,KOCHAM WINDWOS 11,"1,2,3,4",20,,Sieci_komputerowe
-Czy ptoszek jest strona do pobrania zdjęć ptaków ,Multiple Choice,Tak,Ma dużą różnorodność zdjęć smakowitych ptaków ,Jest bezpieczna strona o ptakach,To wirus,,"1,2,3",20,,Sieci_komputerowe
-Czym jest terminal?,Multiple Choice,konsolą,księgą rodzaju,"to sandbox MMO RPG, w którym to ty piszesz własną historię, zamiast podążać wytyczoną ścieżką",rm -rf /*,enchanting table,1,20,,Sieci_komputerowe
-Które z tych programów to VPNy,Multiple Choice,Mullvad,Windscribe,Wireshark,,,1,20,,Sieci_komputerowe
-Ile kabli jest w środku kabla ethernet?,Multiple Choice,9,8,12,4,dużo ,2,20,,Sieci_komputerowe
-Ile portów USB ma płyta główna?,Multiple Choice,4,2,6,Nie ma,,1,20,,Sieci_komputerowe
-Jaka jest pierwsza rzecz którą robisz w programie Minecrosift Edge?,Multiple Choice,Zamykam 1000 tabów z reklamami i personalizacją,Płaczę,Instaluję Google chrome,morduje billa gatesa,Wszystkie powyżej,5,20,,Sieci_komputerowe
-Jaka artyleria przeciwlotnicza jest nailepsza,Multiple Choice,,,,,,3,20,,Informatyka
-Czy głowica nuklearna to głowica hydro wodorowa ,Multiple Choice,tak,nie,idealna na ukraine,stary co ty kurwa piszesz,,3,20,,Informatyka
-Kto jest założycielem apple,Multiple Choice,Norbert Sobczak,Bill Gates,Elon Musk,twój tata,Ja,2,20,,Informatyka
-Uniwersytet ekonomiczny jest głowica nuklearna?,Multiple Choice,tak,,,,,2,20,,Informatyka
-Kto stworzył linux?,Multiple Choice,Tadeusz Mazowiecki,Sławomir Mentzen,Donald Trump,Linus Torvalds,Robert Lewandowski,4,20,,Informatyka
-Co robi programista kiedy nie może zasnąć?,Multiple Choice,Liczy owce,Liczy w systemie binarnym,Debuguje swoje sny,Czyta dokumentację PHP,Wszystkie powyższe,5,20,,Informatyka
-Jak brzmi ulubiony żart routera?,Multiple Choice,Pakiet walks into a bar...,404 - żart not found,Ping... Pong!,Error establishing connection to punchline,,3,20,,Sieci_komputerowe
-Co mówi Linux do Windowsa na placu zabaw?,Multiple Choice,Jestem open source-owy!,Nie bawię się z proprietary software,Twój Blue Screen jest słaby,Sudo make me a sandwich,,4,20,,Linux
-Dlaczego programiści nie lubią natury?,Multiple Choice,Słabe Wi-Fi w lesie,Za dużo bugów (owadów),Drzewa nie mają USB,Wszystkie odpowiedzi są poprawne,,4,20,,Informatyka
-Jaki jest ulubiony taniec webdevelopera?,Multiple Choice,CSS Dance,HTML Shuffle,JavaScript Jive,404 Dance Not Found,Bootstrap Boogie,"1,3,5",20,,Informatyka
-Co robi informatyk na siłowni?,Multiple Choice,Podnosi serversy,Robi CTRL+Z po każdej serii,Debuguje swoją technikę,Formatuje wagę,Optymalizuje wydajność,"1,5",20,,Informatyka
-Jak programista naprawia klimatyzację?,Multiple Choice,Wyłącza i włącza,Aktualizuje sterowniki,Używa wentylacji zależności,Otwiera okno (Windows),,1,20,,Urządzenia techniki komputerowej
-Dlaczego baza danych poszła do lekarza?,Multiple Choice,Miała problemy z relacjami,Zgubiła połączenie,DROP TABLE zdrowie,Miała SQL injection,,1,20,,Informatyka
-Co mówi PHP do JavaScript?,Multiple Choice,Echoluję cię,Jesteś taki klientowy,Nie działasz po mojej stronie,TypeError: undefined is not a function,,3,20,,Informatyka
-Ulubione danie administratora systemu?,Multiple Choice,Spam z filtrem,RAM-en,Cache-a z mlekiem,Wszystkie powyższe,,4,20,,Linux
-Jak haker nazywa swoją kawę?,Multiple Choice,Brute Force Espresso,DDoS (Double Shot),Root Access Roast,SQL Injection Dark Brew,Malware Macchiato,"1,3",20,,Sieci_komputerowe
-Co robi procesor w wolnym czasie?,Multiple Choice,Przetwarza życiowe decyzje,Cache-uje wspomnienia,Wykonuje pętle nieskończonego odpoczynku,Liczy owce w wielowątkowości,,4,20,,Urządzenia techniki komputerowej
-Dlaczego HTML nie kłamie?,Multiple Choice,Bo jest znacznikowy,Jest zbyt przejrzysty,Zawsze się waliduje,Ma otwarte tagi,,1,20,,Informatyka
-Jak informatyk karmi kota?,Multiple Choice,sudo give food,apt-get install food,cat > food,chmod 777 food_bowl,,1,20,,Linux
-Ulubiona gra słowna programisty?,Multiple Choice,Recursion (see Recursion),Array's Kitchen,!false (it's funny because it's true),Wszystkie powyższe,,4,20,,Informatyka
-Co mówi router do drukarki?,Multiple Choice,Masz IP w porządku?,Jak tam twoje porty?,Dlaczego zawsze jesteś offline?,Nie jesteśmy w tej samej sieci,,3,20,,Sieci_komputerowe
-Dlaczego komputer poszedł do lekarza?,Multiple Choice,Złapał wirusa,Miał problemy z pamięcią,Potrzebował update szczepionki,Wszystkie powyższe,,4,20,,Urządzenia techniki komputerowej
-Co programista robi w restauracji?,Multiple Choice,Szuka błędów w menu,Próbuje zoptymalizować zamówienie,Fork-uje cudze dania,Testuje wszystkie potrawy,,2,20,,Informatyka
-Jak informatyk spędza walentynki?,Multiple Choice,Kompiluje uczucia,Programuje randkę,Szuka drugiej połowy w binarce,Debuguje związek,,3,20,,Informatyka
-Co robi Linux w deszczowy dzień?,Multiple Choice,Uruchamia防雨伞.sh,Tworzy kopię zapInformatykawą chmur,sudo rm rain,Instaluje pakiet umbrella,,4,20,,Linux
-Co robi JavaScript w nocy?,Multiple Choice,Liczy asynchroniczne owce,Promise.sleep(),Czeka na callback ze snów,Wszystkie powyższe,,4,20,,Informatyka
-Jak brzmi hasło administratora do Wi-Fi?,Multiple Choice,admin123,password123,Poprawne hasło,hunter2,correcthorsebatterystaple,5,20,,Sieci_komputerowe
-Co mówi jeden RAM do drugiego?,Multiple Choice,Masz wolną pamięć dziś wieczorem?,DDR-yginalny jesteś,Ale masz cache!,Nie jestem taki volatile,,1,20,,Urządzenia techniki komputerowej
-Dlaczego programista nie może otworzyć słoika?,Multiple Choice,Brak uprawnień root,IOException: Lid too tight,Próbuje użyć npm install opener,Czeka na pull request,,1,20,,Linux
-Co robi Python w zoo?,Multiple Choice,Zjada inne języki,Indentuje wybiegi,Importuje nowe zwierzęta,Wszystkie powyższe,,2,20,,Informatyka
-Ulubiony sport informatyka?,Multiple Choice,Surfowanie po sieci,Podnoszenie serwerów,Skoki przez wyjątki,Debug-ging,,3,20,,Informatyka
-Jak CSS spędza weekend?,Multiple Choice,Flexuje przed lustrem,Pozycjonuje się absolutnie,Marginalizuje problemy,Float-uje na basenie,,4,20,,Informatyka
-Co mówi procesor do wentylatora?,Multiple Choice,Jesteś cool,Kręcisz mnie,Przegrzewam się przy tobie,Fan Error 404,,1,20,,Urządzenia techniki komputerowej
-Dlaczego Linux nie gra w gry?,Multiple Choice,Wine not?,Brak sterowników,Sudo apt-get install life,Za dużo zależności,,1,20,,Linux
-Co robi firewall na imprezie?,Multiple Choice,Blokuje niechciane porty,Filtruje podejrzane drinki,DROP TABLE party,Wszystkie powyższe,,4,20,,Sieci_komputerowe
-Jak informatyk naprawia związek?,Multiple Choice,git reset --hard HEAD,ctrl+z,alt+f4,rm -rf problemy/,,1,20,,Informatyka
-Ulubiona przekąska programisty?,Multiple Choice,Chipsy cache,Ciastka cookies,Byte-sy,Wszystkie powyższe,,4,20,,Informatyka
-Co robi HTML na siłowni?,Multiple Choice,Podnosi znaczniki,Wyciska div-y,Trenuje semantykę,Flex-uje,,4,20,,Informatyka
-Dlaczego serwer poszedł na terapię?,Multiple Choice,Miał problemy z połączeniem,Za dużo requestów,Syndrom wypalenia,Error 500: Internal Server Error,,3,20,,Sieci_komputerowe
-Jak informatyk robi pranie?,Multiple Choice,Sortuje według kolorów,Używa algorytmu bubble sort,Debuguje plamy,chmod 777 pralka,,2,20,,Linux
-Co mówi programista do ekspresu do kawy?,Multiple Choice,brew install coffee,make coffee,sudo coffee please,npm install --save caffeine,,1,20,,Informatyka
-Dlaczego monitor jest smutny?,Multiple Choice,Ma niską rozdzielczość,Nikt nie docenia jego input,Wyświetla blue screen,Brak sygnału z życia,,4,20,,Urządzenia techniki komputerowej
-Jak SQL spędza wakacje?,Multiple Choice,SELECT * FROM beach,JOIN innych turystów,GROUP BY zainteresowania,ORDER BY fun DESC,,4,20,,Informatyka
-Co robi DNS w restauracji?,Multiple Choice,Resolve-uje menu,Przekierowuje zamówienia,Cache-uje ulubione dania,Wszystkie powyższe,,4,20,,Sieci_komputerowe
-Dlaczego programista nie może spać?,Multiple Choice,Debuguje sny,Nieskończona pętla bezsenności,Stack overflow łóżka,Zapomniał zamknąć IDE,,2,20,,Informatyka
+Która komenda wLinuxie służy do wyświetlenia zawartości pliku?, Multiple Choice, cat, dog, show, view, , 1, 20, ,Linux
+Który z poniższych dystrybucji Linuksa jest najbardziej popularny wśród użytkowników?, Multiple Choice, Ubuntu, Fedora, ArchLinux, CentOS, , 1, 20, ,Linux
+Co oznacza skrót 'GUI' w kontekście systemów operacyjnych?, Multiple Choice, Graphical User Interface, General Utility Index, Global User Interaction, Gameplay Utility Interface, , 1, 20, ,Linux
+Która komenda wLinuxie służy do zmiany katalogu roboczego?, Multiple Choice, cd, chdir, dir, change, , 1, 20, ,Linux
+Który z poniższych menedżerów pakietów jest używany w dystrybucji Debian?, Multiple Choice, APT, YUM, Pacman, DNF, , 1, 20, ,Linux
+Co oznacza skrót 'LVM' w kontekście zarządzania dyskami wLinuxie?, Multiple Choice, Logical Volume Manager,Linux Volume Management, Logical Virtual Memory,Linux Virtual Manager, , 1, 20, ,Linux
+Który z poniższych poleceń służy do wyświetlenia listy procesów wLinuxie?, Multiple Choice, ps, list, proc, showproc, , 1, 20, ,Linux
+Który z poniższych systemów plików jest najczęściej używany w dystrybucjach Linuksa?, Multiple Choice, ext4, NTFS, FAT32, HFS+, , 1, 20, ,Linux
+Które narzędzie jest używane do zarządzania prawami dostępu do plików wLinuxie?, Multiple Choice, chmod, chown, chattr, chgrp, , 1, 20, ,Linux
+Co oznacza skrót 'SSH' w kontekście połączeń zdalnych?, Multiple Choice, Secure Shell, Simple Server Hosting, Secure System Hub, Standard Server Handling, , 1, 20, ,Linux
+Który system operacyjny został stworzony przez firmę Microsoft?, Multiple Choice, Windows,Linux, macOS, Android, , 1, 20, ,Systemy_operacyjne
+Co oznacza skrót 'OS' w kontekście systemów operacyjnych?, Multiple Choice, Operating System, Optimal Solution, Original Software, Open Source, , 1, 20, ,Systemy_operacyjne
+Który system operacyjny jest najczęściej używany w serwerach?, Multiple Choice,Linux, Windows Server, macOS Server, FreeBSD, , 1, 20, ,Systemy_operacyjne
+Co to jest 'kernel' w kontekście systemów operacyjnych?, Multiple Choice, Jądro systemu operacyjnego, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Systemy_operacyjne
+Który system operacyjny jest domyślnie instalowany na urządzeniach Apple?, Multiple Choice, macOS, iOS, Windows,Linux, , 1, 20, ,Systemy_operacyjne
+Co oznacza skrót 'BIOS' w kontekście systemów operacyjnych?, Multiple Choice, Basic Input/Output System, Binary Input/Output System, Bootstrap Input/Output System, Basic Integrated/Output System, , 1, 20, ,Systemy_operacyjne
+Który system operacyjny jest otwartoźródłowy i często używany w serwerach?, Multiple Choice,Linux, Windows Server, macOS Server, FreeBSD, , 1, 20, ,Systemy_operacyjne
+Co to jest 'procesor' w kontekście systemów operacyjnych?, Multiple Choice, Jednostka centralna, która wykonuje operacje, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Systemy_operacyjne
+Który system operacyjny jest najczęściej używany w urządzeniach mobilnych?, Multiple Choice, Android, iOS, Windows Mobile, BlackBerry OS, , 1, 20, ,Systemy_operacyjne
+Co oznacza skrót 'UEFI' w kontekście systemów operacyjnych?, Multiple Choice, Unified Extensible Firmware Interface, Universal Embedded Firmware Interface, Unified Enhanced Firmware Interface, Universal Extensible Firmware Interface, , 1, 20, ,Systemy_operacyjne
+Co oznacza skrót 'IP' w kontekście sieci komputerowych?, Multiple Choice, Internet Protocol, Internal Protocol, Information Protocol, Integrated Protocol, , 1, 20, ,Sieci_komputerowe
+Który protokół jest używany do przesyłania stron internetowych?, Multiple Choice, HTTP, FTP, SMTP, POP3, , 1, 20, ,Sieci_komputerowe
+Który z poniższych urządzeń jest używany do przechowywania danych?, Multiple Choice, Dysk twardy, Procesor, Pamięć RAM, Karta graficzna, , 1, 20, ,Urządzenia_techniki_komputerowej
+Co to jest 'SSD' w kontekście urządzeń komputerowych?, Multiple Choice, Solid State Drive, Super Speed Drive, Storage System Drive, Speed Storage Drive, , 1, 20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest odpowiedzialny za wyświetlanie obrazów na ekranie?, Multiple Choice, Karta graficzna, Procesor, Pamięć RAM, Dysk twardy, , 1, 20, ,Urządzenia_techniki_komputerowej
+Co to jest 'RAM' w kontekście urządzeń komputerowych?, Multiple Choice, Random Access Memory, Read-Only Memory, Real-time Access Memory, Remote Access Memory, , 1, 20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do chłodzenia komponentów komputera?, Multiple Choice, Wentylator, Procesor, Pamięć RAM, Dysk twardy, , 1, 20, ,Urządzenia_techniki_komputerowej
+Co to jest 'PSU' w kontekście urządzeń komputerowych?, Multiple Choice, Power Supply Unit, Processor Support Unit, Performance Support Unit, Primary Storage Unit, , 1, 20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do połączenia komputera z siecią?, Multiple Choice, Karta sieciowa, Procesor, Pamięć RAM, Dysk twardy, , 1, 20, ,Urządzenia_techniki_komputerowej
+Co to jest 'CPU' w kontekście urządzeń komputerowych?, Multiple Choice, Central Processing Unit, Computer Processing Unit, Central Performance Unit, Computer Performance Unit, , 1, 20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do wprowadzania danych do komputera?, Multiple Choice, Klawiatura, Procesor, Pamięć RAM, Dysk twardy, , 1, 20, ,Urządzenia_techniki_komputerowej
+Co to jest 'algorytm' w kontekście informatyki?, Multiple Choice, Sekwencja kroków do rozwiązania problemu, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Informatyka
+Który z poniższych języków programowania jest najstarszy?, Multiple Choice, Fortran, C, Python, Java, , 1, 20, ,Informatyka
+Co to jest 'baza danych' w kontekście informatyki?, Multiple Choice, Zbiór danych organizowanych w określony sposób, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Informatyka
+Który z poniższych języków programowania jest często używany do tworzenia stron internetowych?, Multiple Choice, JavaScript, C, Python, Java, , 1, 20, ,Informatyka
+Co to jest 'kompilacja' w kontekście informatyki?, Multiple Choice, Proces przekształcania kodu źródłowego w kod maszynowy, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Informatyka
+Który z poniższych języków programowania jest obiektowy?, Multiple Choice, Python, C, JavaScript, Java, , 4, 20, ,Informatyka
+Co to jest 'debugowanie' w kontekście informatyki?, Multiple Choice, Proces wyszukiwania i usuwania błędów w kodzie, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Informatyka
+Który z poniższych języków programowania jest używany do tworzenia aplikacji mobilnych?, Multiple Choice, Swift, C, Python, Java, , 1, 20, ,Informatyka
+Co to jest 'sztuczna inteligencja' w kontekście informatyki?, Multiple Choice, Dziedzina nauki zajmująca się tworzeniem inteligentnych maszyn, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Informatyka
+Który z poniższych języków programowania jest używany do tworzenia gier?, Multiple Choice, C++, C, Python, Java, , 1, 20, ,Informatyka
+Które polecenie w Linuksie służy do wyświetlania zawartości katalogu?,Multiple Choice,ls,cd,mkdir,rm,,1,15,,Linux
+Co oznacza skrót GNU w kontekście Linuksa?,Multiple Choice,GNU's Not Unix,General Network Utility,Great New Unix,Global Node Unit,,1,20,,Linux
+Który demon w Linuksie zarządza logami systemowymi?,Multiple Choice,syslogd,logd,systemlog,journald,,1,20,,Linux
+Jak nazywa się maskotka Linuksa?,Multiple Choice,Tux,Gnu,Pengy,Linux Bird,,1,15,,Linux
+Które narzędzie służy do zarządzania pakietami w dystrybucji Debian?,Multiple Choice,apt-get,yum,pacman,zypper,,1,20,,Linux
+Co to jest sudo w Linuksie?,Multiple Choice,Super User Do,Secure User Do,System Update Do,Switch User Do,,1,15,,Linux
+Które polecenie służy do zmiany uprawnień do pliku w Linuksie?,Multiple Choice,chmod,chown,chgrp,chtime,,1,20,,Linux
+Co robi polecenie grep?,Multiple Choice,Szuka tekstu w plikach,Tworzy nowe pliki,Usuwa katalogi,Sortuje dane,,1,20,,Linux
+Który system plików jest natywny dla Linuksa?,Multiple Choice,ext4,NTFS,FAT32,HFS+,,1,20,,Linux
+Jak nazywa się proces uruchamiania systemuLinux?,Multiple Choice,Bootowanie,Init,Startup,Kernel Load,,2,25,,Linux
+Co to jest pipe (|) w terminalu Linuksa?,Multiple Choice,Przekazuje wyjście jednego polecenia do drugiego,Usuwa pliki,Łączy pliki,Tworzy kopię zapasową,,1,20,,Linux
+Które polecenie służy do wyświetlania aktywnych procesów w Linuksie?,Multiple Choice,ps,top,ls,df,,1,20,,Linux
+Co oznacza skrót CLI w kontekście Linuksa?,Multiple Choice,Command Line Interface,CentralLinux Interface,Common Language Interface,Control Line Interface,,1,15,,Linux
+Który plik w Linuksie przechowuje informacje o użytkownikach?,Multiple Choice,/etc/passwd,/etc/users,/var/users,/home/users,,1,20,,Linux
+Co to jest cron w Linuksie?,Multiple Choice,Harmonogram zadań,Menadżer pakietów,Narzędzie sieciowe,Edytor tekstu,,1,20,,Linux
+Który system operacyjny jest open-source?,Multiple Choice,Linux,Windows,macOS,MS-DOS,,1,15,,Systemy_operacyjne
+Co to jest kernel w systemie operacyjnym?,Multiple Choice,Jądro systemu,Zewnętrzna biblioteka,Interfejs graficzny,Sterownik urządzenia,,1,20,,Systemy_operacyjne
+Który system plików jest domyślny w Windows 10?,Multiple Choice,NTFS,FAT32,ext4,HFS+,,1,20,,Systemy_operacyjne
+Co oznacza skrót BSOD?,Multiple Choice,Blue Screen of Death,Black Screen of Death,Broken System Output Display,Basic System Overload Display,,1,15,,Systemy_operacyjne
+Który system operacyjny używa rejestru systemowego (Registry)?,Multiple Choice,Windows,Linux,macOS,FreeBSD,,1,20,,Systemy_operacyjne
+Co to jest swap w systemach operacyjnych?,Multiple Choice,Obszar wymiany na dysku,Rodzaj pamięci RAM,Mechanizm szyfrowania,Narzędzie do zarządzania plikami,,1,20,,Systemy_operacyjne
+Który system operacyjny został stworzony przez Apple?,Multiple Choice,macOS,iOS,Linux,Windows,,1,15,,Systemy_operacyjne
+Co robi funkcja Hibernacja w systemie operacyjnym?,Multiple Choice,Zapisuje stan systemu na dysku i wyłącza komputer,Usypia komputer bez zapisywania danych,Wyłącza ekran,Zamyka wszystkie aplikacje,,1,20,,Systemy_operacyjne
+Który algorytm szeregowania procesów jest używany w systemach czasu rzeczywistego?,Multiple Choice,Round Robin,First-Come First-Served,Shortest Job First,Priority Scheduling,,4,25,,Systemy_operacyjne
+Co to jest deadlock w kontekście systemów operacyjnych?,Multiple Choice,Zakleszczenie procesów,Błąd alokacji pamięci,Awaria dysku,Przeciążenie CPU,,1,20,,Systemy_operacyjne
+Który system operacyjny jest używany w urządzeniach mobilnych Google?,Multiple Choice,Android,iOS,Windows Mobile,Symbian,,1,15,,Systemy_operacyjne
+Co oznacza skrót GUI?,Multiple Choice,Graphical User Interface,General User Interface,Global Unix Interface,Group Update Installer,,1,15,,Systemy_operacyjne
+Który system operacyjny używa narzędzia Time Machine do tworzenia kopii zapasowych?,Multiple Choice,macOS,Windows,Linux,Android,,1,20,,Systemy_operacyjne
+Co to jest scheduler w systemie operacyjnym?,Multiple Choice,Planista procesów,Menadżer pamięci,Narzędzie sieciowe,System plików,,1,20,,Systemy_operacyjne
+Który system operacyjny jest rozwijany przez społeczność open-source?,Multiple Choice,Fedora,Windows 11,macOS,Chrome OS,,1,20,,Systemy_operacyjne
+Który protokół jest używany do przesyłania stron internetowych?,Multiple Choice,HTTP,FTP,SMTP,DNS,,1,15,,Sieci_komputerowe
+Co oznacza skrót DNS?,Multiple Choice,Domain Name System,Dynamic Network Service,Data Navigation System,Direct Node System,,1,20,,Sieci_komputerowe
+Który port jest używany przez protokół HTTPS?,Multiple Choice,443,80,22,21,,1,15,,Sieci_komputerowe
+Co to jest adres IP 127.0.0.1?,Multiple Choice,Loopback,Podsieć prywatna,Adres routera,Adres serwera DNS,,1,20,,Sieci_komputerowe
+Które urządzenie łączy dwie różne sieci LAN?,Multiple Choice,Router,Switch,Hub,Modem,,1,20,,Sieci_komputerowe
+Co oznacza skrót NAT?,Multiple Choice,Network Address Translation,Node Access Terminal,Network Allocation Table,Node Address Tracking,,1,20,,Sieci_komputerowe
+Który protokół jest używany do bezpiecznego połączenia zdalnego?,Multiple Choice,SSH,Telnet,FTP,HTTP,,1,15,,Sieci_komputerowe
+Co to jest maska podsieci 255.255.255.0 w notacji CIDR?,Multiple Choice,/24,/16,/8,/32,,1,20,,Sieci_komputerowe
+Które narzędzie służy do testowania połączenia sieciowego?,Multiple Choice,ping,traceroute,nslookup,ipconfig,,1,15,,Sieci_komputerowe
+Co oznacza skrót VPN?,Multiple Choice,Virtual Private Network,Vast Public Network,Verified Proxy Network,Variable Port Network,,1,15,,Sieci_komputerowe
+Który model warstwowy opisuje komunikację sieciową?,Multiple Choice,OSI,TCP/IP,HTTP,LAN,,1,20,,Sieci_komputerowe
+Co to jest adres MAC?,Multiple Choice,Unikalny identyfikator karty sieciowej,Adres IP routera,Adres serwera DNS,Numer portu,,1,20,,Sieci_komputerowe
+Który protokół jest używany do przesyłania plików?,Multiple Choice,FTP,SFTP,HTTP,SMTP,,1,15,,Sieci_komputerowe
+Co oznacza skrót DHCP?,Multiple Choice,Dynamic Host Configuration Protocol,Direct Host Control Protocol,Distributed Host Connection Protocol,Data Handling Control Protocol,,1,20,,Sieci_komputerowe
+Które urządzenie działa w warstwie fizycznej modelu OSI?,Multiple Choice,Hub,Router,Switch,Firewall,,1,20,,Sieci_komputerowe
+Co to jest SSD?,Multiple Choice,Dysk półprzewodnikowy,Dysk twardy HDD,Karta graficzna,Pamięć RAM,,1,15,,Urządzenia_techniki_komputerowej
+Który port służy do podłączenia monitora DisplayPort?,Multiple Choice,DisplayPort,HDMI,VGA,USB,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót GPU?,Multiple Choice,Graphics Processing Unit,General Processing Unit,Game Performance Unit,Graphical Power Unit,,1,15,,Urządzenia_techniki_komputerowej
+Który typ pamięci jest najszybszy?,Multiple Choice,Pamięć podręczna CPU (Cache),Pamięć RAM,Dysk SSD,Dysk HDD,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest RAID 0?,Multiple Choice,Striping (zwiększa wydajność),Mirroring (kopiuje dane),Parity (redundancja),Backup,,1,20,,Urządzenia_techniki_komputerowej
+Który element odpowiada za zasilanie komponentów komputera?,Multiple Choice,Zasilacz (PSU),Płyta główna,Karta graficzna,Procesor,,1,15,,Urządzenia_techniki_komputerowej
+Co oznacza skrót NVMe w kontekście dysków?,Multiple Choice,Non-Volatile Memory Express,New Virtual Machine Engine,Network Video Management Extension,Next-Gen Volume Manager,,1,20,,Urządzenia_techniki_komputerowej
+Który typ chłodzenia jest najcichszy?,Multiple Choice,Chłodzenie pasywne (radiator),Chłodzenie wodne,Chłodzenie powietrzne z wentylatorem,Chłodzenie azotem,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest overclocking?,Multiple Choice,Podkręcanie komponentów powyżej fabrycznych parametrów,Zmniejszanie napięcia CPU,Optymalizacja systemu operacyjnego,Wymiana karty graficznej,,1,20,,Urządzenia_techniki_komputerowej
+Który interfejs służy do podłączenia dysku HDD w starszych komputerach?,Multiple Choice,SATA,IDE,NVMe,M.2,,2,25,,Urządzenia_techniki_komputerowej
+Co oznacza skrót UPS?,Multiple Choice,Uninterruptible Power Supply,Universal Power System,Ultra Performance Storage,USB Power Station,,1,15,,Urządzenia_techniki_komputerowej
+Który element płyty głównej łączy procesor z pamięcią RAM?,Multiple Choice,Northbridge,Southbridge,Chipset GPU,BIOS,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest thermal paste?,Multiple Choice,Pasta termoprzewodząca,Pasta izolacyjna,Pasta czyszcząca,Pasta lutownicza,,1,15,,Urządzenia_techniki_komputerowej
+Który typ złącza jest używany w kartach graficznych PCIe?,Multiple Choice,PCI Express x16,PCI Express x1,AGP,SATA,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót TPM w kontekście bezpieczeństwa?,Multiple Choice,Trusted Platform Module,Total Power Management,Thermal Protection Mode,Transfer Protocol Module,,1,20,,Urządzenia_techniki_komputerowej
+Który język programowania jest używany do tworzenia stron internetowych po stronie klienta?,Multiple Choice,JavaScript,Python,Java,C++,,1,15,,Informatyka
+Co oznacza skrót SQL?,Multiple Choice,Structured Query Language,Standard Query Language,System Query Language,Simple Query Language,,1,20,,Informatyka
+Który algorytm sortowania ma złożoność O(n log n)?,Multiple Choice,QuickSort,BubbleSort,InsertionSort,SelectionSort,,1,20,,Informatyka
+Co to jest Big O notation?,Multiple Choice,Miara złożoności obliczeniowej,Typ danych w Pythonie,Narzędzie do debugowania,Format kompresji danych,,1,20,,Informatyka
+Który model w inżynierii oprogramowania dzieli projekt na fazy?,Multiple Choice,Waterfall,Agile,Scrum,Kanban,,1,20,,Informatyka
+Co oznacza skrót API?,Multiple Choice,Application Programming Interface,Advanced Program Interface,Automated Process Integration,Application Protocol Interface,,1,15,,Informatyka
+Który język jest używany do stylizacji stron internetowych?,Multiple Choice,CSS,HTML,JavaScript,PHP,,1,15,,Informatyka
+Co to jest Git?,Multiple Choice,System kontroli wersji,Język programowania,Baza danych,Framework frontendowy,,1,15,,Informatyka
+Który typ danych w Pythonie jest niemutowalny (immutable)?,Multiple Choice,Tuple,List,Dictionary,Set,,1,20,,Informatyka
+Co oznacza skrót REST?,Multiple Choice,Representational State Transfer,Remote System Transfer,Resource Storage Technology,Request State Terminal,,1,20,,Informatyka
+Który paradygmat programowania opiera się na obiektach?,Multiple Choice,Obiektowy,Funkcyjny,Imperatywny,Logiczny,,1,15,,Informatyka
+Co to jest machine learning?,Multiple Choice,Uczenie maszynowe,Programowanie niskopoziomowe,Analiza danych w czasie rzeczywistym,Automatyzacja procesów,,1,20,,Informatyka
+Który algorytm służy do kompresji danych bezstratnej?,Multiple Choice,Huffman,LZW,MP3,JPEG,,1,20,,Informatyka
+Co oznacza skrót IoT?,Multiple Choice,Internet of Things,Input/Output Terminal,Integrated Optimization Tool,Intelligent Operation Technology,,1,15,,Informatyka
+Który język programowania jest używany w analizie danych?,Multiple Choice,Python,R,Java,C#,,1,15,,Informatyka

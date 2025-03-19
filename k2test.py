@@ -612,76 +612,106 @@ class QuizApp:
                 # Wczytaj pytanie z wybranej kategorii
                 self.load_question_from_category(self.selected_category)
         
-        animate_spin()
+        animate_spin()def spin_wheel(self):
+    if self.spinning:
+        return
+            
+    self.spinning = True
+    self.spin_button.config(state=tk.DISABLED)
+    
+    # Losowa liczba obrotów między 2 a 5
+    rotations = random.uniform(2, 5)
+    total_angle = rotations * 360
+    
+    # Losowe spowolnienie
+    slow_down = random.uniform(0.985, 0.995)
+    
+    # Początkowa wysoka prędkość
+    speed = 10
+    
+    def animate_spin():
+        nonlocal speed, total_angle
+        
+        if total_angle > 0 and speed > 0.2:
+            # Aktualizuj kąt
+            self.angle = (self.angle + speed) % 360
+            total_angle -= speed
+            
+            # Przerysuj koło
+            self.draw_wheel()
+            
+            # Spowolnij
+            speed *= slow_down
+            
+            # Kontynuuj animację
+            self.root.after(20, animate_spin)
+        else:
+            # Zakończ kręcenie
+            self.spinning = False
+            self.spin_button.config(state=tk.NORMAL)
+            
+            # Określ wybraną kategorię
+            category_index = int(((self.angle + 180) % 360) / (360 / len(self.categories)))
+            self.selected_category = self.categories[category_index]
+            
+            # Zaktualizuj legendę aby podświetlić wybraną kategorię
+            self.highlight_category(self.selected_category)
+            
+            # Wczytaj pytanie z wybranej kategorii
+            self.load_question_from_category(self.selected_category)
+    
+    animate_spin()
 
-    def create_legend(self):
-        """Creates a legend for the categories with a neon effect."""
-        legend_title = ttk.Label(
-            self.left_frame, 
-            text="KATEGORIE", 
-            font=("Arial", 16, "bold"),
-            foreground="#00FFFF",
+def create_legend(self):
+    # Tytuł legendy z neonowym efektem
+    legend_title = ttk.Label(
+        self.left_frame, 
+        text="KATEGORIE", 
+        font=("Arial", 16, "bold"),
+        foreground="#00FFFF",
+        style="TLabel"
+    )
+    legend_title.pack(pady=(0, 20))
+    
+    # Ramka dla kategorii - bez przewijania
+    legend_frame = ttk.Frame(self.left_frame, style="TFrame")
+    legend_frame.pack(fill=tk.BOTH, expand=True)
+    
+    # Utwórz ramkę dla każdej kategorii w legendzie z cybernetycznym wyglądem
+    for category in self.categories:
+        category_frame = ttk.Frame(legend_frame, style="TFrame")
+        category_frame.pack(fill=tk.X, pady=5)
+        
+        # Wskaźnik koloru - neonowe obramowanie
+        color_canvas = tk.Canvas(
+            category_frame, 
+            width=25, 
+            height=25, 
+            bg="#0D0D1A",
+            highlightthickness=1,
+            highlightbackground=self.category_colors[category]
+        )
+        color_canvas.pack(side=tk.LEFT, padx=5)
+        
+        # Ikona jeśli dostępna
+        if self.category_icons.get(category):
+            icon_label = ttk.Label(category_frame, image=self.category_icons[category])
+            icon_label.pack(side=tk.LEFT, padx=5)
+        
+        # Nazwa kategorii z neonowym efektem
+        name_label = ttk.Label(
+            category_frame, 
+            text=category, 
+            foreground="#E0E0FF",
+            font=("Arial", 12, "bold"),
             style="TLabel"
         )
-        legend_title.pack(pady=(0, 20))
+        name_label.pack(side=tk.LEFT, padx=5)
         
-        # Frame for categories - no scrolling
-        legend_frame = ttk.Frame(self.left_frame, style="TFrame")
-        legend_frame.pack(fill=tk.BOTH, expand=True)
-        
-        # Create a frame for each category in the legend with a cyber look
-        for category in self.categories:
-            category_frame = ttk.Frame(legend_frame, style="TFrame")
-            category_frame.pack(fill=tk.X, pady=5)
-            
-            # Color indicator - neon border
-            color_frame = ttk.Frame(category_frame, style="TFrame")
-            color_frame.pack(side=tk.LEFT, padx=5)
-            
-            color_canvas = tk.Canvas(
-                color_frame, 
-                width=25, 
-                height=25, 
-                bg="#0D0D1A",
-                highlightthickness=1,
-                highlightbackground=self.category_colors[category]
-            )
-            color_canvas.pack()
-            
-            # Add glow effect to the color
-            glow_size = 15
-            for i in range(3):
-                size = glow_size - i*3
-                color_canvas.create_oval(
-                    12-size/2, 12-size/2, 
-                    12+size/2, 12+size/2,
-                    outline=self.category_colors[category],
-                    width=2-i*0.5,
-                    fill=""
-                )
-            
-            # Icon if available
-            if self.category_icons.get(category):
-                icon_frame = ttk.Frame(category_frame, style="TFrame")
-                icon_frame.pack(side=tk.LEFT, padx=5)
-                
-                icon_label = ttk.Label(icon_frame, image=self.category_icons[category])
-                icon_label.pack()
-            
-            # Category name with neon effect
-            name_label = ttk.Label(
-                category_frame, 
-                text=category, 
-                foreground="#E0E0FF",
-                font=("Arial", 12, "bold"),
-                style="TLabel"
-            )
-            name_label.pack(side=tk.LEFT, padx=5)
-            
-            # Save references for highlighting
-            category_frame.color_canvas = color_canvas
-            category_frame.name_label = name_label
-            setattr(self, f"legend_{category}", category_frame)
+        # Zapisz referencje do podświetlania
+        category_frame.color_canvas = color_canvas
+        category_frame.name_label = name_label
+        setattr(self, f"legend_{category}", category_frame)
 
     def highlight_category(self, category):
         # Zresetuj wszystkie kategorie w legendzie
@@ -879,84 +909,29 @@ class QuizApp:
         flash_background()
 
     def reset_for_next_question(self):
-        """Resets the question label and prepares for the next question."""
+        # Zresetuj etykietę pytania z cybernetycznym stylem
         self.question_label.config(
             text="Naciśnij przycisk aby wylosować kolejną kategorię!",
             foreground="#00FFFF",
             font=("Arial", 14)
         )
         
-        # Clear previous options
+        # Wyczyść opcje
         for widget in self.options_frame.winfo_children():
             widget.destroy()
         
         self.answer_vars = []
         
-        # Enable the spin button for the next question
-
-
-
-
-
-
-
-
-
-
-
+        # Włącz przycisk losowania dla następnego pytania
+        self.spin_button.config(state=tk.NORMAL)
+        
+        # Zresetuj aktualne pytanie
         self.current_question = None
 
+def main():
+    root = tk.Tk()
+    app = QuizApp(root)
+    root.mainloop()
 
-
-
-
-
-
-    def main(self):
-        root = tk.Tk()
-        app = QuizApp(root)
-        root.mainloop()
-
-    if __name__ == "__main__":
-        main()
-
-
-</final_file_content>
-
-Please note: Before moving, please review the updated content of the file inside final_file_content, as it is now the current state of the file (including any auto-formatting done by the system), to see if there are any issues/problems or redundant code. If you need to make further changes to this file, use <replace_in_file> to propose SEARCH/REPLACE operations to update the file.
-
-<new_errors>
-
-
-New problems detected after saving the file:
-kolo.py
-- [Pylance Error] Line 899: Unexpected indentation
-Below diff strings you supplied have failed. Please carefully review the errors and retry again with fixed diff strings
-Error: The SEARCH block:
-def reset_for_next_question(self):
-    # Zresetuj etykietę pytania z cybernetycznym stylem
-    self.question_label.config(
-        text="Naciśnij przycisk aby wylosować kolejną kategorię!",
-        foreground="#00FFFF",
-        font=("Arial", 14)
-    )
-    
-    # Wyczyść opcje
-    for widget in self.options_frame.winfo_children():
-        widget.destroy()
-    
-    self.answer_vars = []
-    
-    # Włącz przycisk losowania dla następnego pytania
-...does not match anything in the file.
-This is likely due to differences in whitespace or line endings between the SEARCH block and the actual file. Try again with a more precise SEARCH block.
-(If you keep running into this error, you may use the create_file tool as a workaround.)
-----
-</new_errors> <environment_details>
-# VSCode Visible Files
-kolo.py
-
-# VSCode Open Tabs
-wheel_design_description.txt
-kolo.py
-</environment_details>
+if __name__ == "__main__":
+    main()

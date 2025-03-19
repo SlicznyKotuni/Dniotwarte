@@ -464,7 +464,7 @@ class QuizApp:
         self.neon_glow_ids.extend(center_glow_ids)
         
         # Dodaj wskaźnik z efektem neonowym
-        pointer_size = self.wheel_radius * 0.1
+        pointer_size = self.wheel_radius * 0.05
         pointer = self.wheel_canvas.create_polygon(
             self.wheel_center_x, self.wheel_center_y - self.wheel_radius - pointer_size,
             self.wheel_center_x - pointer_size, self.wheel_center_y - self.wheel_radius + pointer_size,
@@ -473,6 +473,14 @@ class QuizApp:
             outline="white",
             width=2,
             tags="pointer"
+        )
+        pointer_line = self.wheel_canvas.create_line(
+  	  self.wheel_center_x, self.wheel_center_y,
+  	  self.wheel_center_x, self.wheel_center_y - self.wheel_radius,
+  	  fill="#00FFFF",
+	  width=2,
+          dash=(5, 3),
+          tags="pointer_line"
         )
         
         # Dodaj neonową poświatę do wskaźnika

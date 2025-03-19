@@ -16,11 +16,22 @@ Co to jest 'kernel' w kontekście systemów operacyjnych?, Multiple Choice, Jąd
 Który system operacyjny jest domyślnie instalowany na urządzeniach Apple?, Multiple Choice, macOS, iOS, Windows,Linux, , 1, 20, ,Systemy_operacyjne
 Co oznacza skrót 'BIOS' w kontekście systemów operacyjnych?, Multiple Choice, Basic Input/Output System, Binary Input/Output System, Bootstrap Input/Output System, Basic Integrated/Output System, , 1, 20, ,Systemy_operacyjne
 Który system operacyjny jest otwartoźródłowy i często używany w serwerach?, Multiple Choice,Linux, Windows Server, macOS Server, FreeBSD, , 1, 20, ,Systemy_operacyjne
-Co to jest 'procesor' w kontekście systemów operacyjnych?, Multiple Choice, Jednostka centralna, która wykonuje operacje, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Systemy_operacyjne
+Co to jest 'procesor' w kontekście systemów operacyjnych?, Multiple Choice, Jednostka centralna wykonująca operacje, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Systemy_operacyjne
 Który system operacyjny jest najczęściej używany w urządzeniach mobilnych?, Multiple Choice, Android, iOS, Windows Mobile, BlackBerry OS, , 1, 20, ,Systemy_operacyjne
 Co oznacza skrót 'UEFI' w kontekście systemów operacyjnych?, Multiple Choice, Unified Extensible Firmware Interface, Universal Embedded Firmware Interface, Unified Enhanced Firmware Interface, Universal Extensible Firmware Interface, , 1, 20, ,Systemy_operacyjne
 Co oznacza skrót 'IP' w kontekście sieci komputerowych?, Multiple Choice, Internet Protocol, Internal Protocol, Information Protocol, Integrated Protocol, , 1, 20, ,Sieci_komputerowe
 Który protokół jest używany do przesyłania stron internetowych?, Multiple Choice, HTTP, FTP, SMTP, POP3, , 1, 20, ,Sieci_komputerowe
+Co to jest 'router' w kontekście sieci komputerowych?, Multiple Choice, Urządzenie kierujące ruchem sieciowy, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Sieci_komputerowe
+Który port jest domyślnie używany przez protokół HTTP?, Multiple Choice, 80, 443, 21, 25, , 1, 20, ,Sieci_komputerowe
+Co oznacza skrót 'DNS' w kontekście sieci komputerowych?, Multiple Choice, Domain Name System, Data Network Service, Dynamic Node Structure, Digital Network Service, , 1, 20, ,Sieci_komputerowe
+Który protokół jest używany do bezpiecznego przesyłania danych w sieci?, Multiple Choice, HTTPS, FTP, SMTP, POP3, , 1, 20, ,Sieci_komputerowe
+Co to jest 'firewall' w kontekście sieci komputerowych?, Multiple Choice, System zabezpieczający sieć przed nieautoryzowanym dostępem, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, , 1, 20, ,Sieci_komputerowe
+Który protokół jest używany do wysyłania wiadomości e-mail?, Multiple Choice, SMTP, POP3, IMAP, HTTP, , 1, 20, ,Sieci_komputerowe
+Co oznacza skrót 'VPN' w kontekście sieci komputerowych?, Multiple Choice, Virtual Private Network, Virtual Protocol Network, Virtual Private Node, Virtual Protocol Node, , 1, 20, ,Sieci_komputerowe
+Który protokół jest używany do pobierania plików z serwera?, Multiple Choice, FTP, HTTP, SMTP, POP3, , 1, 20, ,Sieci_komputerowe
+Urządzenia_techniki_komputerowej
+
+Co to jest 'GPU' w kontekście urządzeń komputerowych?, Multiple Choice, Graphics Processing Unit, General Purpose Unit, Game Performance Unit, Global Processing Unit, , 1, 20, ,Urządzenia_techniki_komputerowej
 Który z poniższych urządzeń jest używany do przechowywania danych?, Multiple Choice, Dysk twardy, Procesor, Pamięć RAM, Karta graficzna, , 1, 20, ,Urządzenia_techniki_komputerowej
 Co to jest 'SSD' w kontekście urządzeń komputerowych?, Multiple Choice, Solid State Drive, Super Speed Drive, Storage System Drive, Speed Storage Drive, , 1, 20, ,Urządzenia_techniki_komputerowej
 Który z poniższych urządzeń jest odpowiedzialny za wyświetlanie obrazów na ekranie?, Multiple Choice, Karta graficzna, Procesor, Pamięć RAM, Dysk twardy, , 1, 20, ,Urządzenia_techniki_komputerowej

@@ -262,7 +262,7 @@ class QuizApp:
         height = self.wheel_canvas.winfo_height()
         
         # Użyj mniejszego wymiaru, aby koło było całkowicie widoczne
-        wheel_size = min(width, height) - 20
+        wheel_size = min(width, height) - 60
         
         if wheel_size > 100:  # Minimalny rozmiar koła
             self.wheel_center_x = width // 2
@@ -425,15 +425,15 @@ class QuizApp:
             text_x = self.wheel_center_x + (self.wheel_radius * 0.85) * math.cos(mid_angle_rad)
             text_y = self.wheel_center_y + (self.wheel_radius * 0.85) * math.sin(mid_angle_rad)
             
-            text_id = self.wheel_canvas.create_text(
-                text_x, text_y,
-                text=category,
-                fill="#FFFFFF",
-                font=("Arial", 10, "bold"),
-                angle=start_angle + angle_per_category/2 + 90 if start_angle < 180 else start_angle + angle_per_category/2 - 90,
-                tags=f"text_{category}"
-            )
-            self.category_items.append(text_id)
+         #   text_id = self.wheel_canvas.create_text(
+          #      text_x, text_y,
+           #     text=category,
+            #    fill="#FFFFFF",
+             #   font=("Arial", 10, "bold"),
+              #  angle=start_angle + angle_per_category/2 + 90 if start_angle < 180 else start_angle + angle_per_category/2 - 90,
+               # tags=f"text_{category}"
+           # )
+           # self.category_items.append(text_id)
         
         # Narysuj środkowe koło z efektem cyber
         for r in range(int(self.wheel_radius * 0.25), 0, -3):
@@ -603,8 +603,11 @@ class QuizApp:
                     self.wheel_canvas.delete(trail_id)
                 
                 # Określ wybraną kategorię
-                category_index = int(((self.angle + 180) % 360) / (360 / len(self.categories)))
+                angle_per_category = 360 / len(self.categories)
+                adjusted_angle = (self.angle + angle_per_category / 2) % 360  # Dodaj przesunięcie o połowę sekcji
+                category_index = int(adjusted_angle / angle_per_category)  # Oblicz indeks kategorii
                 self.selected_category = self.categories[category_index]
+		
                 
                 # Zaktualizuj legendę aby podświetlić wybraną kategorię
                 self.highlight_category(self.selected_category)

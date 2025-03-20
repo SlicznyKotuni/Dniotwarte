@@ -1,0 +1,207 @@
+Question Text,Question Type,Option 1,Option 2,Option 3,Option 4,Option 5,Correct Answer,Time in seconds,Image Link,Categorry
+Ile procesor CPU ma poziomów pamięci cache?,Multiple Choice,1,2,3,4,,3,20,,Sieci_komputerowe
+Jakie są architektury procesorów?,Multiple Choice,ARM,x86,BRM,AMD,,1-Feb,20,,Sieci_komputerowe
+Rozwiń skrót DNS,Multiple Choice,Digital Network Service,Data Navigation System,Dynamic Node Structure,Domain Name System,,4,20,,Sieci_komputerowe
+Jakie są rodzaje kart NVIDIA,Multiple Choice,RTX,GTX,RX,RXT,GT,"1,2,5",120,,Sieci_komputerowe
+Co oznacz symbol F przy nazwie procesora Intel Core?,Multiple Choice,Możliwość podkręcania (overclocking),Brak wbudowanego układu graficznego,Lepsza wydajność,Wbudowany układ graficzny,,2,20,,Sieci_komputerowe
+jaka jest najlepsza przeglądarka ,Multiple Choice,krawędź,Google chroma,ognisty lis,odważny,,3,,,Sieci_komputerowe
+Czym jest kabel RJ45,Multiple Choice,Kabel Ethernet,Kabel zasilania,to nie kabel,8P8C,,3,20,,Sieci_komputerowe
+do czego służy kabel 8P8C,Checkbox,to nie kabel,takie cos nie istnieje,Ethernet,zamiennik USB 3.0,,3,20,,Sieci_komputerowe
+Co mowi informatyk jak dostanie prezent?,Multiple Choice,110101010101010000000,"if a=""prezent"": print(""Dziękuję bardzo"") else: print(""😭"")",Dziękuję za pamięć,Falgmxłg ac stgagów <3 (klucz 3),,"2,3,4",20,,Sieci_komputerowe
+Ile kosztuje winrar?,Multiple Choice,tak,nie,on kosztuje???!?!?!,,,2.3,20,,Sieci_komputerowe
+"Twój kolega wyciąga niebezpiecznie pendrive, co robisz?",Multiple Choice,dzwonie na 112,"pisze SMS o treści ""POMOC"" na numer 1919",tłumaczę człowiekowi że mógł uszkodzić pendrive,"Rekreacja Mk 15, 6-15",,3,20,,Sieci_komputerowe
+Czy rok 2025 to rok linuxa?,Multiple Choice,tak,odpowiedź A,odpowiedź B,linux krulem,KOCHAM WINDWOS 11,"1,2,3,4",20,,Sieci_komputerowe
+Czy ptoszek jest strona do pobrania zdjęć ptaków ,Multiple Choice,Tak,Ma dużą różnorodność zdjęć smakowitych ptaków ,Jest bezpieczna strona o ptakach,To wirus,,"1,2,3",20,,Sieci_komputerowe
+Czym jest terminal?,Multiple Choice,konsolą,księgą rodzaju,"to sandbox MMO RPG, w którym to ty piszesz własną historię, zamiast podążać wytyczoną ścieżką",rm -rf /*,enchanting table,1,20,,Sieci_komputerowe
+Które z tych programów to VPNy,Multiple Choice,Mullvad,Windscribe,Wireshark,,,1.3,,20,Sieci_komputerowe
+Ile kabli jest w środku kabla ethernet?,Multiple Choice,9,8,12,4,dużo ,2,20,,Sieci_komputerowe
+Jaka jest pierwsza rzecz którą robisz w programie Minecrosift Edge?,Multiple Choice,Zamykam 1000 tabów z reklamami i personalizacją,Edging,Instaluję Google chrome,morduje billa gatesa,Wszystkie powyżej,5,20,,Sieci_komputerowe
+Czy głowica nuklearna to głowica hydro wodorowa ,Multiple Choice,tak,nie,idealna na ukraine,stary co ty kurwa piszesz,,3,20,,Systemy_operacyjne
+Kto stworzył linux?,Multiple Choice,Tadeusz Mazowiecki,Sławomir Mentzen,Donald Trump,Linus Torvalds,Robert Lewandowski,4,20,,Systemy_operacyjne
+Co oznacza skrót GPU?,Multiple Choice,Grinding Professional User,Graphics Processing Unit,Graphics Powering Unit,,,2,20,,Urządzenia_techniki_komputerowej
+Co to SSD?,Multiple Choice,Solid State Drive,Super Speed Disk,Standard Storage Device,Simple Storage Disk,,1,20,,Urządzenia_techniki_komputerowej
+Jakie urządzenie służy do wyświetlania obrazu na ekranie?,Multiple Choice,Monitor,Klawiatura,Myszka,Procesor,,2,20,,Urządzenia_techniki_komputerowej
+Co to jest zasilacz w komputerze?,Multiple Choice,Urządzenie do chłodzenia,Urządzenie do zasilania,Urządzenie do przechowywania danych,Urządzenie do przetwarzania sygnałów,,1,20,,Urządzenia_techniki_komputerowej
+Jakie urządzenie komputerowe odpowiada za wprowadzanie tekstu?,Multiple Choice,Mysz,Klawiatura,Monitor,Drukarka,,3,20,,Urządzenia_techniki_komputerowej
+Który z tych komponentów jest odpowiedzialny za przechowywanie danych?,Multiple Choice,RAM,Procesor,Dysk twardy,Karta graficzna,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót LAN?,Multiple Choice,Local Area Network,Long Area Network,Large Area Network,Local Automated Network,,3,20,,Urządzenia_techniki_komputerowej
+Który protokół jest podstawowym protokołem warstwy sieciowej w TCP/IP?,Multiple Choice,IP,HTTP,FTP,SMTP,,4,20,,Urządzenia_techniki_komputerowej
+Co to jest adres MAC?,Multiple Choice,Adres urządzenia w sieci,Adres internetowy,Adres fizyczny komputera,Adres strony WWW,,4,20,,Urządzenia_techniki_komputerowej
+Jak nazywa się urządzenie do łączenia komputerów w sieci lokalnej?,Multiple Choice,Router,Switch,Modem,Access Point,,3,20,,Urządzenia_techniki_komputerowej
+Co to jest DHCP?,Multiple Choice,Protokół przydzielający adresy IP,Protokół do przesyłania plików,Protokół szyfrowania,Protokół do analizy ruchu,,2,20,,Urządzenia_techniki_komputerowej
+Co to jest VLAN?,Multiple Choice,Wirtualna sieć lokalna,Szyfrowana sieć lokalna,Sieć do zarządzania urządzeniami,Przełącznik w sieci LAN,,1,20,,Urządzenia_techniki_komputerowej
+Który z tych protokołów jest odpowiedzialny za przesyłanie poczty e-mail?,Multiple Choice,HTTP,SMTP,POP3,FTP,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest NAT?,Multiple Choice,Sieć rozproszona,Tłumaczenie adresów sieciowych,Ochrona przed wirusami,Protokół transmisji plików,,3,20,,Urządzenia_techniki_komputerowej
+Który protokół odpowiada za przesyłanie stron internetowych?,Multiple Choice,SMTP,FTP,HTTP,SNMP,,2,20,,Urządzenia_techniki_komputerowej
+Co to jest firewall?,Multiple Choice,Program zabezpieczający komputer,Urządzenie sieciowe do analizy ruchu,Oprogramowanie do obróbki grafiki,Program do zarządzania siecią,,2,20,,Urządzenia_techniki_komputerowej
+Co to jest IP?,Multiple Choice,Unikalny identyfikator komputera,Adres fizyczny karty sieciowej,Numer seryjny komputera,Adres w sieci komputerowej,,3,20,,Urządzenia_techniki_komputerowej
+Co to jest system operacyjny?,Multiple Choice,Program do zarządzania danymi,Oprogramowanie do edycji dokumentów,Oprogramowanie do zarządzania zSystemy_operacyjnebami sprzętowymi i oprogramowaniem,System do edycji zdjęć,,2,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót UNIX?,Multiple Choice,Typ systemu operacyjnego,Typ komputera,Typ aplikacji,Typ języka programowania,,3,20,,Urządzenia_techniki_komputerowej
+Co to jest menedżer zadań w systemie Windows?,Multiple Choice,Program do zarządzania plikami,Program do monitorowania i zarządzania procesami,Program do edycji zdjęć,Program do przechowywania danych,,2,20,,Urządzenia_techniki_komputerowej
+Który system operacyjny jest open-source?,Multiple Choice,Windows,Linux,macOS,Android,,2,20,,Informatyka
+Co to jest BIOS?,Multiple Choice,System operacyjny,Program do edycji tekstu,Podstawowy system wejścia/wyjścia,Program do szyfrowania danych,,3,20,,Informatyka
+Co oznacza skrót GUI?,Multiple Choice,General User Interface,Graphical User Interface,Generalized User Interface,Global User Interface,,2,20,,Informatyka
+Co to jest shell?,Multiple Choice,Interfejs tekstowy do pracy z systemem,Oprogramowanie do zarządzania siecią,Program do edycji kodu,Typ systemu operacyjnego,,1,20,,Informatyka
+Który z tych języków jest językiem skryptowym?,Multiple Choice,Java,Python,C++,Bash,,4,20,,Informatyka
+czym jest administrator(admin) systemu operacyjnego?,Multiple Choice,Osobą zarządzająca sprzętem,Osobą zarządzającą bazą danych,Osoba odpowiedzialna za zarządzanie systemem komputerowym,Osoba odpowiedzialna za oprogramowanie,,3,20,,Informatyka
+Jak nazywa się narzędzie w systemie Windows do zarządzania partycjami?,Multiple Choice,Disk Manager,Task Manager,File Explorer,System Monitor,,1,20,,Systemy_operacyjne
+Co to jest RAID?,Multiple Choice,Typ dysku twardego,System do przechowywania danych,Zestaw dysków twardych dla zwiększenia wydajności lub bezpieczeństwa danych,Protokół sieciowy,,3,20,,Urządzenia_techniki_komputerowej
+Czym jest jest logowanie do systemu operacyjnego?,Multiple Choice,Proces weryfikacji tożsamości użytkownika,Proces tworzenia konta użytkownika,Proces instalacji systemu,Proces wyłączania systemu,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót DHCP?,Multiple Choice,Dynamic Host Configuration Protocol,Domain Host Configuration Protocol,Data Hosting Configuration Protocol,Direct Hosting Configuration Protocol,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest kontroler domeny?,Multiple Choice,Serwer przechowujący dane,Serwer zarządzający użytkownikami w sieci,Router w sieci komputerowej,Przełącznik w sieci LAN,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest aktywacja systemu operacyjnego?,Multiple Choice,Proces instalacji aplikacji,Proces konfiguracji komputera,Proces uruchamiania systemu,Proces potwierdzenia legalności systemu,,4,20,,Urządzenia_techniki_komputerowej
+Który z tych systemów operacyjnych jest używany w serwerach?,Multiple Choice,Linux,macOS,Windows,Android,,1.3,20,,Urządzenia_techniki_komputerowej
+Co to jest dysk twardy (HDD)?,Multiple Choice,Urządzenie do przechowywania danych,Szybka pamięć operacyjna,Urządzenie do zasilania,Urządzenie do wyświetlania obrazu,,1,20,,Urządzenia_techniki_komputerowej
+Jakie urządzenie jest używane do skanowania dokumentów?,Multiple Choice,Monitor,Drukarka,Skaner,Mysz,,3,20,,Urządzenia_techniki_komputerowej
+Co to jest karta graficzna?,Multiple Choice,Urządzenie do przechowywania danych,Urządzenie do przetwarzania obrazu,Urządzenie do obliczeń matematycznych,Urządzenie do łączenia z siecią,,2,20,,Urządzenia_techniki_komputerowej
+Jak nazywa się standardowy interfejs do komunikacji z urządzeniami peryferyjnymi?,Multiple Choice,USB,HDMI,VGA,SATA,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest pamięć flash?,Multiple Choice,Pamięć o niskiej prędkości,Pamięć trwała,Pamięć o dużej pojemności,Pamięć o dużej prędkości,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest adres IP w kontekście sieci komputerowych?,Multiple Choice,Adres fizyczny urządzenia,Unikalny numer przypisany urządzeniu w sieci,Numer wersji systemu operacyjnego,Adres wirtualnej maszyny,,2,20,,Urządzenia_techniki_komputerowej
+Co to jest router?,Multiple Choice,Urządzenie służące do rozdzielania i dyrekcjonowania połączeń w sieci,Urządzenie do monitorowania danych,Urządzenie do przechowywania plików,Urządzenie do analizy ruchu sieciowego,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót VPN?,Multiple Choice,Virtual Private Network,Virtual Public Network,Very Private Network,Virtual Path Network,,1,20,,Informatyka
+Czym jest DNS?,Multiple Choice,Serwerem do zarządzania użytkownikami,Serwerem do konwersji nazw domen na adresy IP,Protokołem do przesyłania plików,Narzędziem do zarządzaniem adresami IP,,2,20,,Sieci_komputerowe
+Jak nazywa się protokół stosowany do przesyłania plików w sieci?,Multiple Choice,FTP,HTTP,SMTP,SNMP,,1,20,,Sieci_komputerowe
+Co to jest Wi-Fi?,Multiple Choice,Bezprzewodowa sieć komputerowa,Przewodowa sieć komputerowa,Urządzenie do łączenia komputerów,Protokół szyfrowania w sieci,,1,20,,Sieci_komputerowe
+"""S"" w HTTPS stanowi:",Multiple Choice,Szybkość,Standard,Szyfrowanie,Jest tam dla wyglądu,,3,20,,Informatyka
+Co to jest switch w kontekście sieci?,Multiple Choice,Urządzenie do monitorowania ruchu sieciowego,Urządzenie do przekazywania sygnałów,Urządzenie do łączenia komputerów w sieci,Urządzenie do rozdzielania łącza internetowego,,3,20,,Sieci_komputerowe
+Jak nazywa się protokół do zabezpieczania komunikacji przez internet?,Multiple Choice,HTTPS,HTTP,FTP,SNMP,,1,20,,Sieci_komputerowe
+Co to jest VLAN w sieci komputerowej?,Multiple Choice,Zbiór urządzeń w sieci,Wirtualna sieć komputerowa,Sieć przewodowa,Typ zabezpieczenia sieci,,2,20,,Sieci_komputerowe
+Co oznacza skrót DNS?,Multiple Choice,Domain Name System,Domain Network System,Digital Network System,Direct Network Service,,1,20,,Sieci_komputerowe
+Co to jest serwer proxy?,Multiple Choice,Serwer do przechowywania plików,Serwer do szyfrowania danych,Serwer pośredniczący w komunikacji w sieci,Serwer do rozdzielania połączeń,,3,20,,Sieci_komputerowe
+Co to jest DHCP w kontekście sieci?,Multiple Choice,Protokół przydzielający adresy IP,Protokół do przesyłania plików,Protokół do zarządzania ruchem sieciowym,Protokół do szyfrowania danych,,1,20,,Sieci_komputerowe
+Co to jest VLAN?,Multiple Choice,Przełącznik w sieci lokalnej,Szyfrowany kanał komunikacji,Wirtualna sieć lokalna,Sieć do przesyłania plików,,2.3,20,,Sieci_komputerowe
+Które urządzenie zarządza ruchem między różnymi sieciami?,Multiple Choice,Switch,Modem,Router,Access Point,,3,20,,Sieci_komputerowe
+Co to jest NAT w kontekście sieci komputerowych?,Multiple Choice,Protokół przydzielania adresów,Tłumaczenie adresów prywatnych na publiczne w sieci,Typ szyfrowania transmisji,Protokół zarządzania ruchem,,2,20,,Sieci_komputerowe
+Co to jest system operacyjny?,Multiple Choice,Program do zarządzania komputerem,Program do edycji tekstu,Oprogramowanie do obróbki grafiki,Program do zarządzania siecią,,1,20,,Systemy_operacyjne
+czym jest system plików w systemie operacyjnym?,Multiple Choice,Metoda organizowania danych,Program do edycji zdjęć,Program do kompresji danych,Program do tworzenia kopii zapSystemy_operacyjnewych,,1,20,,Systemy_operacyjne
+Które system operacyjny jest najczęściej używany na serwerach?,Multiple Choice,Windows,macOS,Linux,Android,BSD,3.5,20,,Sieci_komputerowe
+Co to jest system operacyjny Linux?,Multiple Choice,System do edycji tekstu,System operacyjny open-source,Program do zarządzania plikami,Program do tworzenia stron WWW,,2,20,,Linux
+Co to jest wirtualizacja w kontekście komputerów?,Multiple Choice,Tworzenie wirtualnych maszyn,Programowanie sterowników,Kompresja danych,Proces instalacji systemu,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót RAM?,Multiple Choice,Random Access Memory,Real-time Access Memory,Rapid Application Memory,Restricted Access Memory,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót HDMI?,Multiple Choice,High Definition Multimedia Interface,High Density Media Input,High Digital Management Interface,High Digital Memory Interface,,1,20,,Sieci_komputerowe
+Jakie urządzenie jest odpowiedzialne za konwersję sygnałów analogowych na cyfrowe?,Multiple Choice,Modem,Przełącznik,Router,Konwerter analogowo-cyfrowy,,4,20,,Linux
+Która komenda wLinuxie służy do wyświetlenia zawartości pliku?, Multiple Choice, cat, dog, show, view, ,1,20, ,Linux
+Który z poniższych dystrybucji Linuksa jest najbardziej popularny wśród użytkowników?, Multiple Choice, Ubuntu, Fedora, ArchLinux, CentOS, ,1,20, ,Linux
+Co oznacza skrót 'GUI' w kontekście systemów operacyjnych?, Multiple Choice, Graphical User Interface, General Utility Index, Global User Interaction, Gameplay Utility Interface, ,1,20, ,Linux
+Która komenda wLinuxie służy do zmiany katalogu roboczego?, Multiple Choice, cd, chdir, dir, change, ,1,20, ,Linux
+Który z poniższych menedżerów pakietów jest używany w dystrybucji Debian?, Multiple Choice, APT, YUM, Pacman, DNF, ,1,20, ,Linux
+Co oznacza skrót 'LVM' w kontekście zarządzania dyskami wLinuxie?, Multiple Choice, Logical Volume Manager,Linux Volume Management, Logical Virtual Memory,Linux Virtual Manager, ,1,20, ,Linux
+Który z poniższych poleceń służy do wyświetlenia listy procesów wLinuxie?, Multiple Choice, ps, list, proc, showproc, ,1,20, ,Linux
+Który z poniższych systemów plików jest najczęściej używany w dystrybucjach Linuksa?, Multiple Choice, ext4, NTFS, FAT32, HFS+, ,1,20, ,Linux
+Które narzędzie jest używane do zarządzania prawami dostępu do plików wLinuxie?, Multiple Choice, chmod, chown, chattr, chgrp, ,1,20, ,Linux
+Co oznacza skrót 'SSH' w kontekście połączeń zdalnych?, Multiple Choice, Secure Shell, Simple Server Hosting, Secure System Hub, Standard Server Handling, ,1,20, ,Linux
+Który system operacyjny został stworzony przez firmę Microsoft?, Multiple Choice, Windows,Linux, macOS, Android, ,1,20, ,Systemy_operacyjne
+Co oznacza skrót 'OS' w kontekście systemów operacyjnych?, Multiple Choice, Operating System, Optimal Solution, Original Software, Open Source, ,1,20, ,Systemy_operacyjne
+Który system operacyjny jest najczęściej używany w serwerach?, Multiple Choice,Linux, Windows Server, macOS Server, FreeBSD, ,1,20, ,Systemy_operacyjne
+Co to jest 'kernel' w kontekście systemów operacyjnych?, Multiple Choice, Jądro systemu operacyjnego, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Systemy_operacyjne
+Który system operacyjny jest domyślnie instalowany na urządzeniach Apple?, Multiple Choice, macOS, iOS, Windows,Linux, ,1,20, ,Systemy_operacyjne
+Co oznacza skrót 'BIOS' w kontekście systemów operacyjnych?, Multiple Choice, Basic Input/Output System, Binary Input/Output System, Bootstrap Input/Output System, Basic Integrated/Output System, ,1,20, ,Systemy_operacyjne
+Który system operacyjny jest otwartoźródłowy i często używany w serwerach?, Multiple Choice,Linux, Windows Server, macOS Server, FreeBSD, ,1,20, ,Systemy_operacyjne
+Co to jest 'procesor' w kontekście systemów operacyjnych?, Multiple Choice, Jednostka centralna wykonująca operacje, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Systemy_operacyjne
+Który system operacyjny jest najczęściej używany w urządzeniach mobilnych?, Multiple Choice, Android, iOS, Windows Mobile, BlackBerry OS, ,1,20, ,Systemy_operacyjne
+Co oznacza skrót 'UEFI' w kontekście systemów operacyjnych?, Multiple Choice, Unified Extensible Firmware Interface, Universal Embedded Firmware Interface, Unified Enhanced Firmware Interface, Universal Extensible Firmware Interface, ,1,20, ,Systemy_operacyjne
+Co oznacza skrót 'IP' w kontekście sieci komputerowych?, Multiple Choice, Internet Protocol, Internal Protocol, Information Protocol, Integrated Protocol, ,1,20, ,Sieci_komputerowe
+Który protokół jest używany do przesyłania stron internetowych?, Multiple Choice, HTTP, FTP, SMTP, POP3, ,1,20, ,Sieci_komputerowe
+Co to jest 'router' w kontekście sieci komputerowych?, Multiple Choice, Urządzenie kierujące ruchem sieciowy, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Sieci_komputerowe
+Który port jest domyślnie używany przez protokół HTTP?, Multiple Choice,80,443,21,25, ,1,20, ,Sieci_komputerowe
+Co oznacza skrót 'DNS' w kontekście sieci komputerowych?, Multiple Choice, Domain Name System, Data Network Service, Dynamic Node Structure, Digital Network Service, ,1,20, ,Sieci_komputerowe
+Który protokół jest używany do bezpiecznego przesyłania danych w sieci?, Multiple Choice, HTTPS, FTP, SMTP, POP3, ,1,20, ,Sieci_komputerowe
+Co to jest 'firewall' w kontekście sieci komputerowych?, Multiple Choice, System zabezpieczający sieć przed nieautoryzowanym dostępem, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Sieci_komputerowe
+Który protokół jest używany do wysyłania wiadomości e-mail?, Multiple Choice, SMTP, POP3, IMAP, HTTP, ,1,20, ,Sieci_komputerowe
+Co oznacza skrót 'VPN' w kontekście sieci komputerowych?, Multiple Choice, Virtual Private Network, Virtual Protocol Network, Virtual Private Node, Virtual Protocol Node, ,1,20, ,Sieci_komputerowe
+Który protokół jest używany do pobierania plików z serwera?, Multiple Choice, FTP, HTTP, SMTP, POP3, ,1,20, ,Sieci_komputerowe
+Co to jest 'GPU' w kontekście urządzeń komputerowych?, Multiple Choice, Graphics Processing Unit, General Purpose Unit, Game Performance Unit, Global Processing Unit, ,1,20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do przechowywania danych?, Multiple Choice, Dysk twardy, Procesor, Pamięć RAM, Karta graficzna, ,1,20, ,Urządzenia_techniki_komputerowej
+Co to jest 'SSD' w kontekście urządzeń komputerowych?, Multiple Choice, Solid State Drive, Super Speed Drive, Storage System Drive, Speed Storage Drive, ,1,20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest odpowiedzialny za wyświetlanie obrazów na ekranie?, Multiple Choice, Karta graficzna, Procesor, Pamięć RAM, Dysk twardy, ,1,20, ,Urządzenia_techniki_komputerowej
+Co to jest 'RAM' w kontekście urządzeń komputerowych?, Multiple Choice, Random Access Memory, Read-Only Memory, Real-time Access Memory, Remote Access Memory, ,1,20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do chłodzenia komponentów komputera?, Multiple Choice, Wentylator, Procesor, Pamięć RAM, Dysk twardy, ,1,20, ,Urządzenia_techniki_komputerowej
+Co to jest 'PSU' w kontekście urządzeń komputerowych?, Multiple Choice, Power Supply Unit, Processor Support Unit, Performance Support Unit, Primary Storage Unit, ,1,20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do połączenia komputera z siecią?, Multiple Choice, Karta sieciowa, Procesor, Pamięć RAM, Dysk twardy, ,1,20, ,Urządzenia_techniki_komputerowej
+Co to jest 'CPU' w kontekście urządzeń komputerowych?, Multiple Choice, Central Processing Unit, Computer Processing Unit, Central Performance Unit, Computer Performance Unit, ,1,20, ,Urządzenia_techniki_komputerowej
+Który z poniższych urządzeń jest używany do wprowadzania danych do komputera?, Multiple Choice, Klawiatura, Procesor, Pamięć RAM, Dysk twardy, ,1,20, ,Urządzenia_techniki_komputerowej
+Co to jest 'algorytm' w kontekście informatyki?, Multiple Choice, Sekwencja kroków do rozwiązania problemu, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Informatyka
+Który z poniższych języków programowania jest najstarszy?, Multiple Choice, Fortran, C, Python, Java, ,1,20, ,Informatyka
+Co to jest 'baza danych' w kontekście informatyki?, Multiple Choice, Zbiór danych organizowanych w określony sposób, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Informatyka
+Który z poniższych języków programowania jest często używany do tworzenia stron internetowych?, Multiple Choice, JavaScript, C, Python, Java, ,1,20, ,Informatyka
+Co to jest 'kompilacja' w kontekście informatyki?, Multiple Choice, Proces przekształcania kodu źródłowego w kod maszynowy, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Informatyka
+Który z poniższych języków programowania jest obiektowy?, Multiple Choice, Python, C, JavaScript, Java, ,4,20, ,Informatyka
+Co to jest 'debugowanie' w kontekście informatyki?, Multiple Choice, Proces wyszukiwania i usuwania błędów w kodzie, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Informatyka
+Który z poniższych języków programowania jest używany do tworzenia aplikacji mobilnych?, Multiple Choice, Swift, C, Python, Java, ,1,20, ,Informatyka
+Co to jest 'sztuczna inteligencja' w kontekście informatyki?, Multiple Choice, Dziedzina nauki zajmująca się tworzeniem inteligentnych maszyn, Program antywirusowy, Menedżer plików, Przeglądarka internetowa, ,1,20, ,Informatyka
+Który z poniższych języków programowania jest używany do tworzenia gier?, Multiple Choice, C++, C, Python, Java, ,1,20, ,Informatyka
+Które polecenie w Linuksie służy do wyświetlania zawartości katalogu?,Multiple Choice,ls,cd,mkdir,rm,,1,15,,Linux
+Co oznacza skrót GNU w kontekście Linuksa?,Multiple Choice,GNU's Not Unix,General Network Utility,Great New Unix,Global Node Unit,,1,20,,Linux
+Który demon w Linuksie zarządza logami systemowymi?,Multiple Choice,syslogd,logd,systemlog,journald,,1,20,,Linux
+Jak nazywa się maskotka Linuksa?,Multiple Choice,Tux,Gnu,Pengy,Linux Bird,,1,15,,Linux
+Które narzędzie służy do zarządzania pakietami w dystrybucji Debian?,Multiple Choice,apt-get,yum,pacman,zypper,,1,20,,Linux
+Co to jest sudo w Linuksie?,Multiple Choice,Super User Do,Secure User Do,System Update Do,Switch User Do,,1,15,,Linux
+Które polecenie służy do zmiany uprawnień do pliku w Linuksie?,Multiple Choice,chmod,chown,chgrp,chtime,,1,20,,Linux
+Co robi polecenie grep?,Multiple Choice,Szuka tekstu w plikach,Tworzy nowe pliki,Usuwa katalogi,Sortuje dane,,1,20,,Linux
+Który system plików jest natywny dla Linuksa?,Multiple Choice,ext4,NTFS,FAT32,HFS+,,1,20,,Linux
+Jak nazywa się proces uruchamiania systemuLinux?,Multiple Choice,Bootowanie,Init,Startup,Kernel Load,,2,25,,Linux
+Co to jest pipe (|) w terminalu Linuksa?,Multiple Choice,Przekazuje wyjście jednego polecenia do drugiego,Usuwa pliki,Łączy pliki,Tworzy kopię zapSystemy_operacyjnewą,,1,20,,Linux
+Które polecenie służy do wyświetlania aktywnych procesów w Linuksie?,Multiple Choice,ps,top,ls,df,,1,20,,Linux
+Co oznacza skrót CLI w kontekście Linuksa?,Multiple Choice,Command Line Interface,CentralLinux Interface,Common Language Interface,Control Line Interface,,1,15,,Linux
+Który plik w Linuksie przechowuje informacje o użytkownikach?,Multiple Choice,/etc/passwd,/etc/users,/var/users,/home/users,,1,20,,Linux
+Co to jest cron w Linuksie?,Multiple Choice,Harmonogram zadań,Menadżer pakietów,Narzędzie sieciowe,Edytor tekstu,,1,20,,Linux
+Który system operacyjny jest open-source?,Multiple Choice,Linux,Windows,macOS,MS-DOS,,1,15,,Systemy_operacyjne
+Co to jest kernel w systemie operacyjnym?,Multiple Choice,Jądro systemu,Zewnętrzna biblioteka,Interfejs graficzny,Sterownik urządzenia,,1,20,,Systemy_operacyjne
+Który system plików jest domyślny w Windows 10?,Multiple Choice,NTFS,FAT32,ext4,HFS+,,1,20,,Systemy_operacyjne
+Co oznacza skrót BSOD?,Multiple Choice,Blue Screen of Death,Black Screen of Death,Broken System Output Display,Basic System Overload Display,,1,15,,Systemy_operacyjne
+Który system operacyjny używa rejestru systemowego (Registry)?,Multiple Choice,Windows,Linux,macOS,FreeBSD,,1,20,,Systemy_operacyjne
+Co to jest swap w systemach operacyjnych?,Multiple Choice,Obszar wymiany na dysku,Rodzaj pamięci RAM,Mechanizm szyfrowania,Narzędzie do zarządzania plikami,,1,20,,Systemy_operacyjne
+Który system operacyjny został stworzony przez Apple?,Multiple Choice,macOS,iOS,Linux,Windows,,1,15,,Systemy_operacyjne
+Co robi funkcja Hibernacja w systemie operacyjnym?,Multiple Choice,Zapisuje stan systemu na dysku i wyłącza komputer,Usypia komputer bez zapisywania danych,Wyłącza ekran,Zamyka wszystkie aplikacje,,1,20,,Systemy_operacyjne
+Który algorytm szeregowania procesów jest używany w systemach czasu rzeczywistego?,Multiple Choice,Round Robin,First-Come First-Served,Shortest Job First,Priority Scheduling,,4,25,,Systemy_operacyjne
+Co to jest deadlock w kontekście systemów operacyjnych?,Multiple Choice,Zakleszczenie procesów,Błąd alokacji pamięci,Awaria dysku,Przeciążenie CPU,,1,20,,Systemy_operacyjne
+Który system operacyjny jest używany w urządzeniach mobilnych Google?,Multiple Choice,Android,iOS,Windows Mobile,Symbian,,1,15,,Systemy_operacyjne
+Co oznacza skrót GUI?,Multiple Choice,Graphical User Interface,General User Interface,Global Unix Interface,Group Update Installer,,1,15,,Systemy_operacyjne
+Który system operacyjny używa narzędzia Time Machine do tworzenia kopii zapSystemy_operacyjnewych?,Multiple Choice,macOS,Windows,Linux,Android,,1,20,,Systemy_operacyjne
+Co to jest scheduler w systemie operacyjnym?,Multiple Choice,Planista procesów,Menadżer pamięci,Narzędzie sieciowe,System plików,,1,20,,Systemy_operacyjne
+Który system operacyjny jest rozwijany przez społeczność open-source?,Multiple Choice,Fedora,Windows 11,macOS,Chrome OS,,1,20,,Systemy_operacyjne
+Który protokół jest używany do przesyłania stron internetowych?,Multiple Choice,HTTP,FTP,SMTP,DNS,,1,15,,Sieci_komputerowe
+Co oznacza skrót DNS?,Multiple Choice,Domain Name System,Dynamic Network Service,Data Navigation System,Direct Node System,,1,20,,Sieci_komputerowe
+Który port jest używany przez protokół HTTPS?,Multiple Choice,443,80,22,21,,1,15,,Sieci_komputerowe
+Co to jest adres IP 127.0.0.1?,Multiple Choice,Loopback,Podsieć prywatna,Adres routera,Adres serwera DNS,,1,20,,Sieci_komputerowe
+Które urządzenie łączy dwie różne sieci LAN?,Multiple Choice,Router,Switch,Hub,Modem,,1,20,,Sieci_komputerowe
+Co oznacza skrót NAT?,Multiple Choice,Network Address Translation,Node Access Terminal,Network Allocation Table,Node Address Tracking,,1,20,,Sieci_komputerowe
+Który protokół jest używany do bezpiecznego połączenia zdalnego?,Multiple Choice,SSH,Telnet,FTP,HTTP,,1,15,,Sieci_komputerowe
+Co to jest maska podsieci 255.255.255.0 w notacji CIDR?,Multiple Choice,/24,/16,/8,/32,,1,20,,Sieci_komputerowe
+Które narzędzie służy do testowania połączenia sieciowego?,Multiple Choice,ping,traceroute,nslookup,ipconfig,,1,15,,Sieci_komputerowe
+Co oznacza skrót VPN?,Multiple Choice,Virtual Private Network,Vast Public Network,Verified Proxy Network,Variable Port Network,,1,15,,Sieci_komputerowe
+Który model warstwowy opisuje komunikację sieciową?,Multiple Choice,OSI,TCP/IP,HTTP,LAN,,1,20,,Sieci_komputerowe
+Co to jest adres MAC?,Multiple Choice,Unikalny identyfikator karty sieciowej,Adres IP routera,Adres serwera DNS,Numer portu,,1,20,,Sieci_komputerowe
+Który protokół jest używany do przesyłania plików?,Multiple Choice,FTP,SFTP,HTTP,SMTP,,1,15,,Sieci_komputerowe
+Co oznacza skrót DHCP?,Multiple Choice,Dynamic Host Configuration Protocol,Direct Host Control Protocol,Distributed Host Connection Protocol,Data Handling Control Protocol,,1,20,,Sieci_komputerowe
+Które urządzenie działa w warstwie fizycznej modelu OSI?,Multiple Choice,Hub,Router,Switch,Firewall,,1,20,,Sieci_komputerowe
+Co to jest SSD?,Multiple Choice,Dysk półprzewodnikowy,Dysk twardy HDD,Karta graficzna,Pamięć RAM,,1,15,,Urządzenia_techniki_komputerowej
+Który port służy do podłączenia monitora DisplayPort?,Multiple Choice,DisplayPort,HDMI,VGA,USB,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót GPU?,Multiple Choice,Graphics Processing Unit,General Processing Unit,Game Performance Unit,Graphical Power Unit,,1,15,,Urządzenia_techniki_komputerowej
+Który typ pamięci jest najszybszy?,Multiple Choice,Pamięć podręczna CPU (Cache),Pamięć RAM,Dysk SSD,Dysk HDD,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest RAID 0?,Multiple Choice,Striping (zwiększa wydajność),Mirroring (kopiuje dane),Parity (redundancja),Backup,,1,20,,Urządzenia_techniki_komputerowej
+Który element odpowiada za zasilanie komponentów komputera?,Multiple Choice,Zasilacz (PSU),Płyta główna,Karta graficzna,Procesor,,1,15,,Urządzenia_techniki_komputerowej
+Co oznacza skrót NVMe w kontekście dysków?,Multiple Choice,Non-Volatile Memory Express,New Virtual Machine Engine,Network Video Management Extension,Next-Gen Volume Manager,,1,20,,Urządzenia_techniki_komputerowej
+Który typ chłodzenia jest najcichszy?,Multiple Choice,Chłodzenie pasywne (radiator),Chłodzenie wodne,Chłodzenie powietrzne z wentylatorem,Chłodzenie azotem,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest overclocking?,Multiple Choice,Podkręcanie komponentów powyżej fabrycznych parametrów,Zmniejszanie napięcia CPU,Optymalizacja systemu operacyjnego,Wymiana karty graficznej,,1,20,,Urządzenia_techniki_komputerowej
+Który interfejs służy do podłączenia dysku HDD w starszych komputerach?,Multiple Choice,SATA,IDE,NVMe,M.2,,2,25,,Urządzenia_techniki_komputerowej
+Co oznacza skrót UPS?,Multiple Choice,Uninterruptible Power Supply,Universal Power System,Ultra Performance Storage,USB Power Station,,1,15,,Urządzenia_techniki_komputerowej
+Który element płyty głównej łączy procesor z pamięcią RAM?,Multiple Choice,Northbridge,Southbridge,Chipset GPU,BIOS,,1,20,,Urządzenia_techniki_komputerowej
+Co to jest thermal paste?,Multiple Choice,Pasta termoprzewodząca,Pasta izolacyjna,Pasta czyszcząca,Pasta lutownicza,,1,15,,Urządzenia_techniki_komputerowej
+Który typ złącza jest używany w kartach graficznych PCIe?,Multiple Choice,PCI Express x16,PCI Express x1,AGP,SATA,,1,20,,Urządzenia_techniki_komputerowej
+Co oznacza skrót TPM w kontekście bezpieczeństwa?,Multiple Choice,Trusted Platform Module,Total Power Management,Thermal Protection Mode,Transfer Protocol Module,,1,20,,Urządzenia_techniki_komputerowej
+Który język programowania jest używany do tworzenia stron internetowych po stronie klienta?,Multiple Choice,JavaScript,Python,Java,C++,,1,15,,Informatyka
+Co oznacza skrót SQL?,Multiple Choice,Structured Query Language,Standard Query Language,System Query Language,Simple Query Language,,1,20,,Informatyka
+Który algorytm sortowania ma złożoność O(n log n)?,Multiple Choice,QuickSort,BubbleSort,InsertionSort,SelectionSort,,1,20,,Informatyka
+Co to jest Big O notation?,Multiple Choice,Miara złożoności obliczeniowej,Typ danych w Pythonie,Narzędzie do debugowania,Format kompresji danych,,1,20,,Informatyka
+Który model w inżynierii oprogramowania dzieli projekt na fazy?,Multiple Choice,Waterfall,Agile,Scrum,Kanban,,1,20,,Informatyka
+Co oznacza skrót API?,Multiple Choice,Application Programming Interface,Advanced Program Interface,Automated Process Integration,Application Protocol Interface,,1,15,,Informatyka
+Który język jest używany do stylizacji stron internetowych?,Multiple Choice,CSS,HTML,JavaScript,PHP,,1,15,,Informatyka
+Co to jest Git?,Multiple Choice,System kontroli wersji,Język programowania,Baza danych,Framework frontendowy,,1,15,,Informatyka
+Który typ danych w Pythonie jest niemutowalny (immutable)?,Multiple Choice,Tuple,List,Dictionary,Set,,1,20,,Informatyka
+Co oznacza skrót REST?,Multiple Choice,Representational State Transfer,Remote System Transfer,Resource Storage Technology,Request State Terminal,,1,20,,Informatyka
+Który paradygmat programowania opiera się na obiektach?,Multiple Choice,Obiektowy,Funkcyjny,Imperatywny,Logiczny,,1,15,,Informatyka
+Co to jest machine learning?,Multiple Choice,Uczenie maszynowe,Programowanie niskopoziomowe,Analiza danych w czasie rzeczywistym,Automatyzacja procesów,,1,20,,Informatyka
+Który algorytm służy do kompresji danych bezstratnej?,Multiple Choice,Huffman,LZW,MP3,JPEG,,1,20,,Informatyka
+Co oznacza skrót IoT?,Multiple Choice,Internet of Things,Input/Output Terminal,Integrated Optimization Tool,Intelligent Operation Technology,,1,15,,Informatyka
+Który język programowania jest używany w analizie danych?,Multiple Choice,Python,R,Java,C#,,1,15,,Informatyka
